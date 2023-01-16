@@ -1,6 +1,6 @@
 export function Icon(props) {
   return (
-    <svg aria-hidden="true" {...props} width="182" height="46">
+    <svg aria-hidden="true" viewBox="0 0 41 48" {...props}>
       <g fill="none" fillRule="nonzero">
         <path fill="#8892BF" d="M4.27 41.658.585.242h40.512l-3.685 41.393-16.604 4.607"/>
         <path fill="#A5ADCF" d="M20.841 42.72V3.641h16.56l-3.16 35.333"/>
