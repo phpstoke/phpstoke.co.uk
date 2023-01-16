@@ -163,7 +163,7 @@ export function Speakers() {
                         )}
                       />
                       <div
-                        className="absolute inset-0 bg-indigo-50"
+                        className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
                         style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
                       >
                         <Image
