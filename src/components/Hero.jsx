@@ -27,18 +27,16 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
-              A PHP meetup for all. Whether you’re working with vanilla PHP, WordPress, Magento, Laravel or something else, you’re welcome along.
+              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">Gener8 Smithfield Works in Hanley</a>.
             </p>
             <p>
-              At DeceptiConf you’ll learn about the latest dark patterns being
-              developed to trick even the smartest visitors, and you’ll learn
-              how to deploy them without ever being detected.
+              PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local PHP developers, learn about PHP and eat pizza 🍕.
             </p>
           </div>
           <Button href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
+            Get your FREE ticket
           </Button>
-          <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-16 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
+          <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Talks', '3'],
               ['Attendees', '40+'],
@@ -52,6 +50,12 @@ export function Hero() {
                 </dd>
               </div>
             ))}
+            <div>
+              <dt className="font-mono text-sm text-indigo-600">Twitter</dt>
+              <dd className="mt-0.5 text-2xl font-semibold tracking-tighter text-indigo-900">
+                <a href="https://twitter.com/phpstoke" className="underline hover:text-indigo-600" target="_blank" rel="_noreferrer">@phpstoke</a>
+              </dd>
+            </div>
           </dl>
         </div>
       </Container>

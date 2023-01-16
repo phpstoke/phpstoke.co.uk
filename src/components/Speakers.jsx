@@ -20,16 +20,19 @@ const days = [
         role: 'Lead Developer @ Transport for Wales',
         image: oliverDaviesImage,
         talk: 'Things to know about PHP',
+        lightning: false,
       }, {
         name: 'Luke Browne',
         role: 'Lead Software Developer @ Wealth Wizards',
         image: lukeBrowneImage,
         talk: 'Ship every day, fail every day',
+        lightning: false,
       }, {
         name: 'Christopher Miller',
         role: 'Designer at Globex Corporation',
         image: christopherMillerImage,
         talk: 'Full Stack Engineer @ Jump Twenty Four',
+        lightning: false,
       },
     ],
   },
@@ -88,8 +91,7 @@ export function Speakers() {
             Speakers
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Learn from the experts on the cutting-edge of deception at the most
-            sinister companies.
+            Thank you to all our speakers, past and present. Looking to give your first talk? <a href="https://forms.gle/ZjZHE4qzmJR7FnZE8" target="_blank" className="underline hover:text-indigo-600 highlight">Submit your talk</a>.
           </p>
         </div>
         <Tab.Group
@@ -152,7 +154,7 @@ export function Speakers() {
                           'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
                           [
                             'border-indigo-300',
-                            'border-indigo-300',
+                            'border-indigo-400',
                             'border-sky-300',
                           ][speakerIndex % 3]
                         )}

@@ -38,8 +38,7 @@ export function Newsletter() {
                 Stay up to date
               </p>
               <p className="mt-4 text-lg tracking-tight text-indigo-900">
-                Get updates on all of our events and be the first to get
-                notified when tickets go on sale.
+                Be the first to receive the latest PHP Stoke news.
               </p>
             </div>
             <div>
