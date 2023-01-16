@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html className="bg-white antialiased" lang="en">
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.bunny.net" />
         <link
           rel="preconnect"
