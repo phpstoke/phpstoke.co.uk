@@ -11,7 +11,7 @@ const sponsors = [
 
 export function Sponsors() {
   return (
-    <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
+    <section id="sponsors" aria-label="Sponsors" className="py-12 sm:py-20">
       <Container>
         <div className="mx-auto lg:mx-0 text-center">
           <h2
@@ -24,7 +24,7 @@ export function Sponsors() {
             Thank you to the sponsors who make our meetup possible.
           </p>
         </div>
-        <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-y-12 gap-x-32 sm:grid-cols-2 md:gap-x-16 lg:gap-x-32">
+        <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 sm:grid-cols-2 md:gap-x-16 lg:gap-x-32">
           {sponsors.map((sponsor) => (
             <div
               key={sponsor.name}
