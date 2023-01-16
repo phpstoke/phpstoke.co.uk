@@ -5,7 +5,6 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.jpg'
 
-import image1 from '@/images/events/phpstoke1.jpg'
 import image2 from '@/images/events/phpstoke2.jpg'
 import image3 from '@/images/events/phpstoke3.jpg'
 import image4 from '@/images/events/phpstoke4.jpg'
@@ -17,7 +16,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
