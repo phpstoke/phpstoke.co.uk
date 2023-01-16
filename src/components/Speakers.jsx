@@ -94,7 +94,7 @@ export function Speakers() {
             Speakers
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Thank you to all our speakers, past and present. Looking to give your first talk? <a href="https://forms.gle/ZjZHE4qzmJR7FnZE8" target="_blank" className="underline hover:text-indigo-600 highlight" rel="noreferrer">Submit your talk</a>.
+            Thank you to all our speakers, past and present. Fancy speaking? <a href="https://forms.gle/ZjZHE4qzmJR7FnZE8" target="_blank" className="underline hover:text-indigo-600 highlight" rel="noreferrer">Submit your talk</a>.
           </p>
         </div>
         <Tab.Group
