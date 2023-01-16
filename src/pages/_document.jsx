@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html className="bg-white antialiased" lang="en">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.bunny.net" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -13,7 +13,7 @@ export default function Document() {
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+          href="https://fonts.bunny.net/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
         />
         <script src="https://getsendstack.com/js/form.js" key="sendstack-js" async></script>
       </Head>
