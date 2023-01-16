@@ -15,7 +15,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
         />
-        <script src="https://getsendstack.com/js/form.js" key="sendstack-js"></script>
+        <script src="https://getsendstack.com/js/form.js" key="sendstack-js" async></script>
       </Head>
       <body>
         <Main />

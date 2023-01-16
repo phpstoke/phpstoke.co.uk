@@ -53,7 +53,7 @@ export function Hero() {
             <div>
               <dt className="font-mono text-sm text-indigo-600">Twitter</dt>
               <dd className="mt-0.5 text-2xl font-semibold tracking-tighter text-indigo-900">
-                <a href="https://twitter.com/phpstoke" className="underline hover:text-indigo-600" target="_blank" rel="_noreferrer">@phpstoke</a>
+                <a href="https://twitter.com/phpstoke" className="underline hover:text-indigo-600" target="_blank" rel="noreferrer">@phpstoke</a>
               </dd>
             </div>
           </dl>
