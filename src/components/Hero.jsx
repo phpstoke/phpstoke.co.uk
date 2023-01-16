@@ -30,10 +30,10 @@ export function Hero() {
               The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">Gener8 Smithfield Works in Hanley</a>.
             </p>
             <p>
-              PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local PHP developers, learn about PHP and eat pizza 🍕.
+              PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
             </p>
           </div>
-          <Button href="#" className="mt-10 w-full sm:hidden">
+          <Button href="https://php-stoke.eventbrite.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">
             Get your FREE ticket
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
