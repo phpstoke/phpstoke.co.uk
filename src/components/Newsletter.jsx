@@ -78,7 +78,7 @@ export function Newsletter() {
                 </div>
 
                 <div className="mt-2 text-sm text-indigo-900 font-semibold">
-                  <a href="https://getsendstack.com/?ref=phpstoke">Powered by SendStack</a>
+                  <a href="https://getsendstack.com/?ref=phpstoke" className="underline hover:text-indigo-600">Powered by SendStack</a>
                 </div>
               </form>
             </div>

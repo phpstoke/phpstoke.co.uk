@@ -60,7 +60,7 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
-              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">Gener8 Smithfield Works in Hanley</a>.
+              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">Genr8 Smithfield Works in Hanley</a>.
             </p>
             <p>
               PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
@@ -74,18 +74,18 @@ export function Hero() {
               ['Talks', '3'],
               ['Attendees', '40+'],
               ['Venue', 'Genr8 Smithfield Works'],
-              ['Location', 'Hanley, ST1 4UE'],
+              ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-indigo-600">{name}</dt>
-                <dd className="mt-0.5 text-2xl font-semibold tracking-tighter text-indigo-900">
+                <dd className="mt-0.5 text-2xl sm:text-xl font-semibold tracking-tighter text-indigo-900 text-ellipsis overflow-hidden">
                   {value}
                 </dd>
               </div>
             ))}
             <div>
               <dt className="font-mono text-sm text-indigo-600">Twitter</dt>
-              <dd className="mt-0.5 text-2xl font-semibold tracking-tighter text-indigo-900">
+              <dd className="mt-0.5 text-2xl sm:text-xl font-semibold tracking-tighter text-indigo-900">
                 <a href="https://twitter.com/phpstoke" className="underline hover:text-indigo-600" target="_blank" rel="noreferrer">@phpstoke</a>
               </dd>
             </div>

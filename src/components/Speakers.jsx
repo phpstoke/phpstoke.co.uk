@@ -12,7 +12,7 @@ import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
 const days = [
   {
     name: 'PHP Stoke #1',
-    date: 'Jan 11',
+    date: 'Jan 11, 2023',
     dateTime: '2023-01-11',
     speakers: [
       {
