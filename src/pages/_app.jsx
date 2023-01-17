@@ -52,14 +52,14 @@ export default function App({ Component, pageProps, router }) {
         <meta property="og:title" content="PHP Stoke" />
         <meta property="og:url" content={fullUrl} />
         <meta property="og:locale" content="en_GB" />
-        <meta property="og:image" content={`${origin}/og.png`} />
+        <meta property="og:image" content="https://phpstoke.co.uk/og.png" />
         <meta property="og:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
 
         <meta property="twitter:site" content="@phpstoke" />
         <meta property="twitter:creator" content="@phpstoke" />
         <meta property="twitter:url" content={fullUrl} />
         <meta property="twitter:title" content="PHP Stoke" />
-        <meta property="twitter:image" content={`${origin}/og.png`} />
+        <meta property="twitter:image" content="https://phpstoke.co.uk/og.png" />
         <meta property="twitter:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
       </Head>
 
