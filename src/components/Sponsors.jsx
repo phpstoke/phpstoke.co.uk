@@ -24,20 +24,20 @@ export function Sponsors() {
             Thank you to the sponsors who make our meetup possible.
           </p>
         </div>
-        <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
+        <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 sm:grid-cols-3 md:gap-x-8 lg:gap-x-32">
           {sponsors.map((sponsor) => (
             <div
               key={sponsor.name}
               className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
             >
-              <a href={sponsor.link}>
+              <a href={sponsor.link} className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
                 <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} unoptimized />
               </a>
             </div>
           ))}
 
           <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
-            <a href="mailto:james@alt-three.com?subject=Sponsor PHP Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600">
+            <a href="mailto:james@alt-three.com?subject=Sponsor PHP Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
               <h2 className="text-2xl font-medium font-display tracking-tighter">Sponsor PHP Stoke</h2>
               <p className="font-display tracking-tight">Contact us about sponsoring our next event.</p>
             </a>
