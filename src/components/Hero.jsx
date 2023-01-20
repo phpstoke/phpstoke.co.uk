@@ -78,7 +78,7 @@ export function Hero() {
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-indigo-600">{name}</dt>
-                <dd className="mt-0.5 text-2xl sm:text-xl font-semibold tracking-tighter text-indigo-900">
+                <dd className="mt-0.5 text-2xl sm:text-xl font-semibold tracking-tighter text-indigo-900 break-words">
                   {value}
                 </dd>
               </div>
