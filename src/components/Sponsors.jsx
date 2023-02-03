@@ -1,12 +1,18 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import logoDotdigital from '@/images/logos/dotdigital.svg'
-import logoJetBrains from '@/images/logos/jetbrains.svg'
+// import logoDotdigital from '@/images/logos/dotdigital.svg'
+// import logoJetBrains from '@/images/logos/jetbrains.svg'
+import logoSmithfieldWorks from '@/images/logos/smithfield-works.svg'
+import logoSendStack from '@/images/logos/sendstack.svg'
+import logoKlarna from '@/images/logos/klarna.svg'
 
 const sponsors = [
-  { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
-  { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
+  // { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
+  // { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
+  // { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
+  { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
+  { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
 
 export function Sponsors() {
@@ -39,7 +45,7 @@ export function Sponsors() {
           <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
             <a href="mailto:james@alt-three.com?subject=Sponsor PHP Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
               <h2 className="text-2xl font-medium font-display tracking-tighter">Sponsor PHP Stoke</h2>
-              <p className="font-display tracking-tight">Contact us about sponsoring our next event.</p>
+              <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
             </a>
           </div>
         </div>
