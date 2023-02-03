@@ -1,0 +1,20 @@
+/* TEAM */
+Organiser: James Brooks
+Contact: james@alt-three.com
+Twitter: @jbrooksuk
+Company: Laravel
+
+Organiser: Andy Jones
+Contact: andy@awaredigital.co.uk
+Company: Aware Digital
+
+Organiser: Rich Jones
+Contact: rich@awaredigital.co.uk
+Company: Aware Digital
+
+/* EVENT */
+Event: PHP Stoke
+What3Words: ///melon.prices.soil
+Twitter: @phpstoke
+Location: The Smithfield Works, Broad St, Hanley, Stoke-on-Trent, ST1 4UE
+About: PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
