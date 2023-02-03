@@ -9,7 +9,29 @@ import oliverDaviesImage from '@/images/avatars/oliver-davies.jpg'
 import lukeBrowneImage from '@/images/avatars/luke-browne.jpg'
 import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
 
+import { BoltIcon, UserIcon } from '@heroicons/react/24/solid'
+
 const days = [
+  {
+    name: 'PHP Stoke #2',
+    date: 'Apr 27th, 2023',
+    dateTime: '2023-04-27',
+    speakers: [
+      {
+        available: true,
+        lightning: false,
+      }, {
+        available: true,
+        lightning: false,
+      }, {
+        available: true,
+        lightning: true,
+      }, {
+        available: true,
+        lightning: true,
+      }
+    ],
+  },
   {
     name: 'PHP Stoke #1',
     date: 'Jan 12, 2023',
@@ -56,6 +78,110 @@ function ImageClipPaths({ id, ...props }) {
         </clipPath>
       </defs>
     </svg>
+  )
+}
+
+function Speaker({id, speaker, speakerIndex, ...props}) {
+  if (speaker.available) {
+    return <SpeakerAvailable id={id} speaker={speaker} speakerIndex={speakerIndex} {...props} />
+  } else {
+    return <SpeakerProfile id={id} speaker={speaker} speakerIndex={speakerIndex} {...props} />
+  }
+}
+
+function SpeakerAvailable({ id, speaker, speakerIndex, ...props }) {
+  return (
+      <div>
+        <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+          <div
+              className={clsx(
+                  'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                  [
+                    'border-indigo-300',
+                    'border-indigo-400',
+                    'border-sky-300',
+                  ][speakerIndex % 3]
+              )}
+          />
+          <div
+              className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
+              style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+          >
+            <UserIcon className="text-indigo-400 transition duration-300 group-hover:scale-90" />
+          </div>
+        </div>
+        <div className="space-y-2 space-x-4 xl:flex xl:items-center xl:justify-between mt-8">
+          <div className="space-y-1 text-lg font-medium leading-6">
+            <div>
+              <h3 className="text-indigo-900">
+                {
+                    speaker.lightning ? (
+                      <div>
+                        <BoltIcon className="text-yellow-400 w-6 h-6 inline-block mr-2 -mt-1" />
+                        15-minute lightning talk
+                      </div>
+                    ) : (
+                      <span>30-minute talk</span>
+                    )
+                }
+              </h3>
+              <p className="mt-1 text-base tracking-tight text-slate-500">
+                Interested? <a className="underline hover:text-indigo-600" href="https://forms.gle/ZjZHE4qzmJR7FnZE8">Submit your { speaker.lightning && 'lightning' } talk</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  )
+}
+
+function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
+  return (
+      <div>
+        <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+          <div
+              className={clsx(
+                  'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                  [
+                    'border-indigo-300',
+                    'border-indigo-400',
+                    'border-sky-300',
+                  ][speakerIndex % 3]
+              )}
+          />
+          <div
+              className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
+              style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+          >
+            <Image
+                className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                src={speaker.image}
+                alt=""
+                priority
+                sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+            />
+          </div>
+        </div>
+        <div className="space-y-2 space-x-4 xl:flex xl:items-center xl:justify-between mt-8">
+          <div className="space-y-1 text-lg font-medium leading-6">
+            <h3 className="text-indigo-900">{speaker.name}</h3>
+            <p className="mt-1 text-base tracking-tight text-slate-500">{speaker.role}</p>
+          </div>
+          <ul role="list" className="flex justify-center space-x-5">
+            {
+                speaker.twitterUrl &&
+                <li>
+                  <a href={speaker.twitterUrl} className="text-gray-400 hover:text-gray-300">
+                    <span className="sr-only">Twitter</span>
+                    <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                  </a>
+                </li>
+            }
+          </ul>
+        </div>
+      </div>
   )
 }
 
@@ -150,51 +276,7 @@ export function Speakers() {
                 unmount={false}
               >
                 {day.speakers.map((speaker, speakerIndex) => (
-                  <div key={speakerIndex}>
-                    <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-                      <div
-                        className={clsx(
-                          'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                          [
-                            'border-indigo-300',
-                            'border-indigo-400',
-                            'border-sky-300',
-                          ][speakerIndex % 3]
-                        )}
-                      />
-                      <div
-                        className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
-                        style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
-                      >
-                        <Image
-                          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
-                          alt=""
-                          priority
-                          sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2 space-x-4 xl:flex xl:items-center xl:justify-between mt-8">
-                      <div className="space-y-1 text-lg font-medium leading-6">
-                        <h3 className="text-indigo-900">{speaker.name}</h3>
-                        <p className="mt-1 text-base tracking-tight text-slate-500">{speaker.role}</p>
-                      </div>
-                      <ul role="list" className="flex justify-center space-x-5">
-                        {
-                          speaker.twitterUrl &&
-                          <li>
-                            <a href={speaker.twitterUrl} className="text-gray-400 hover:text-gray-300">
-                              <span className="sr-only">Twitter</span>
-                              <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                              </svg>
-                            </a>
-                          </li>
-                        }
-                      </ul>
-                    </div>
-                  </div>
+                  <Speaker key={speakerIndex} speakerIndex={speakerIndex} speaker={speaker} id={id} />
                 ))}
               </Tab.Panel>
             ))}

@@ -60,7 +60,7 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
-              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">Genr8 Smithfield Works in Hanley</a>.
+              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.
             </p>
             <p>
               PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
