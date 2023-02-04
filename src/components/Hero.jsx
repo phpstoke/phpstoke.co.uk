@@ -73,7 +73,7 @@ export function Hero() {
             {[
               ['Talks', '3'],
               ['Attendees', '40+'],
-              ['Venue', 'Genr8 Smithfield Works'],
+              ['Venue', 'The Smithfield Works'],
               ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
