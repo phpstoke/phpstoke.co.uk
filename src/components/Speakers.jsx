@@ -59,7 +59,7 @@ const days = [
         twitterUrl: 'https://twitter.com/lukebrwne',
       }, {
         name: 'Christopher Miller',
-        role: 'Designer at Globex Corporation',
+        role: 'Developer @ Jump24',
         image: christopherMillerImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/ccmiller2018',
