@@ -9,6 +9,7 @@ import oliverDaviesImage from '@/images/avatars/oliver-davies.jpg'
 import lukeBrowneImage from '@/images/avatars/luke-browne.jpg'
 import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
 import andyJonesImage from '@/images/avatars/andy-jones.jpg'
+import jamesSecondeImage from '@/images/avatars/james-seconde.jpg'
 
 import { BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -19,15 +20,17 @@ const days = [
     dateTime: '2023-04-27',
     speakers: [
       {
+        name: 'James Seconde',
+        role: 'Developer Advocate @ Vonage',
+        image: jamesSecondeImage,
+        lightning: false,
+        twitterUrl: 'https://twitter.com/SecondeJ',
+      }, {
         name: 'Andy Jones',
         role: 'Director @ Aware Digital',
         image: andyJonesImage,
-        talk: 'Hyvä: A quicker development process',
         lightning: false,
         twitterUrl: 'https://twitter.com/awaredigital_uk',
-      }, {
-        available: true,
-        lightning: false,
       }, {
         available: true,
         lightning: true,
@@ -46,21 +49,18 @@ const days = [
         name: 'Oliver Davies',
         role: 'Lead Developer @ Transport for Wales',
         image: oliverDaviesImage,
-        talk: 'Things to know about PHP',
         lightning: false,
         twitterUrl: 'https://twitter.com/opdavies',
       }, {
         name: 'Luke Browne',
         role: 'Lead Software Developer @ Wealth Wizards',
         image: lukeBrowneImage,
-        talk: 'Ship every day, fail every day',
         lightning: false,
         twitterUrl: 'https://twitter.com/lukebrwne',
       }, {
         name: 'Christopher Miller',
         role: 'Designer at Globex Corporation',
         image: christopherMillerImage,
-        talk: 'Full Stack Engineer @ Jump Twenty Four',
         lightning: false,
         twitterUrl: 'https://twitter.com/ccmiller2018',
       },
