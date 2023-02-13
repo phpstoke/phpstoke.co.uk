@@ -17,7 +17,7 @@ export function Header() {
               <time dateTime="2023-01-11">27 April, 2023 @ 6:30pm</time>
             </p>
             <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" />
-            <p className="overflow-hidden text-ellipsis">The Smithfield Works, Hanley</p>
+            <p className="overflow-hidden text-ellipsis">Smithfield Works, Hanley</p>
           </div>
         </div>
         <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
