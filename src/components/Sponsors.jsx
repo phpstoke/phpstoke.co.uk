@@ -6,11 +6,13 @@ import { Container } from '@/components/Container'
 import logoSmithfieldWorks from '@/images/logos/smithfield-works.svg'
 import logoSendStack from '@/images/logos/sendstack.svg'
 import logoKlarna from '@/images/logos/klarna.svg'
+import logoPalletOnline from '@/images/logos/palletonline.svg'
 
 const sponsors = [
   // { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
   // { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
   // { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
+  { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
