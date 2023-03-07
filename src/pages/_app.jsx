@@ -55,7 +55,7 @@ export default function App({ Component, pageProps, router }) {
         <meta property="og:image" content="https://phpstoke.co.uk/og.png" />
         <meta property="og:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
 
-        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@phpstoke" />
         <meta name="twitter:creator" content="@phpstoke" />
         <meta name="twitter:url" content={fullUrl} />
