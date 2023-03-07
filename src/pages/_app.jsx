@@ -48,19 +48,20 @@ export default function App({ Component, pageProps, router }) {
   return (
     <>
       <Head>
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="PHP Stoke" />
-        <meta property="og:url" content={fullUrl} />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:image" content="https://phpstoke.co.uk/og.png" />
-        <meta property="og:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
+        <meta name="og:type" content="website" />
+        <meta name="og:title" content="PHP Stoke" />
+        <meta name="og:url" content={fullUrl} />
+        <meta name="og:locale" content="en_GB" />
+        <meta name="og:image" content="https://phpstoke.co.uk/og.png" />
+        <meta name="og:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
 
-        <meta property="twitter:site" content="@phpstoke" />
-        <meta property="twitter:creator" content="@phpstoke" />
-        <meta property="twitter:url" content={fullUrl} />
-        <meta property="twitter:title" content="PHP Stoke" />
-        <meta property="twitter:image" content="https://phpstoke.co.uk/og.png" />
-        <meta property="twitter:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@phpstoke" />
+        <meta name="twitter:creator" content="@phpstoke" />
+        <meta name="twitter:url" content={fullUrl} />
+        <meta name="twitter:title" content="PHP Stoke" />
+        <meta name="twitter:image" content="https://phpstoke.co.uk/og.png" />
+        <meta name="twitter:description" content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
       </Head>
 
       <Component previousPathname={previousPathname} {...pageProps} />
