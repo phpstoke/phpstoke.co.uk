@@ -15,7 +15,7 @@ export default function Home() {
         <title>PHP Stoke - The Stoke-on-Trent PHP meetup.</title>
         <meta
           name="description"
-          content="The Stoke-on-Trent PHP meetup."
+          content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink."
         />
       </Head>
       <Header />
