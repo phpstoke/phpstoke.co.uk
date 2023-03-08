@@ -11,12 +11,12 @@ import { Sponsors } from '@/components/Sponsors'
 export async function getStaticProps() {
   return {
     props: {
-      vercelUrl: process.env.VERCEL_URL,
+      fullUrl: process.env.FULL_URL,
     }
   }
 }
 
-export default function Home({vercelUrl}) {
+export default function Home({fullUrl}) {
   return (
     <>
       <Head>
@@ -26,8 +26,8 @@ export default function Home({vercelUrl}) {
           content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink."
         />
 
-        <meta property="og:url" content={vercelUrl} key="ogUrl" />
-        <meta name="twitter:url" content={vercelUrl} key="twitterUrl" />
+        <meta property="og:url" content={fullUrl} key="ogUrl" />
+        <meta name="twitter:url" content={fullUrl} key="twitterUrl" />
       </Head>
       <Header />
       <main>
