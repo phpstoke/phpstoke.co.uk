@@ -8,11 +8,6 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.bunny.net" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
           rel="stylesheet"
           href="https://fonts.bunny.net/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
         />
