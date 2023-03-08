@@ -8,7 +8,15 @@ import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
 import { Sponsors } from '@/components/Sponsors'
 
-export default function Home() {
+export async function getStaticProps() {
+  return {
+    props: {
+      vercelUrl: process.env.VERCEL_URL,
+    }
+  }
+}
+
+export default function Home({vercelUrl}) {
   return (
     <>
       <Head>
@@ -17,6 +25,9 @@ export default function Home() {
           name="description"
           content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink."
         />
+
+        <meta property="og:url" content={vercelUrl} key="ogUrl" />
+        <meta name="twitter:url" content={vercelUrl} key="twitterUrl" />
       </Head>
       <Header />
       <main>
