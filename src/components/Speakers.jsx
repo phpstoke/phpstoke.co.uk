@@ -10,8 +10,9 @@ import lukeBrowneImage from '@/images/avatars/luke-browne.jpg'
 import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
 import andyJonesImage from '@/images/avatars/andy-jones.jpg'
 import jamesSecondeImage from '@/images/avatars/james-seconde.jpg'
+import ashleyAllenImage from '@/images/avatars/ashley-allen.jpeg'
 
-import { BoltIcon, UserIcon } from '@heroicons/react/24/solid'
+import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
 const days = [
   {
@@ -23,17 +24,23 @@ const days = [
         name: 'James Seconde',
         role: 'Developer Advocate @ Vonage',
         image: jamesSecondeImage,
-        lightning: false,
         twitterUrl: 'https://twitter.com/SecondeJ',
+        lightning: false,
+        available: false,
       }, {
         name: 'Andy Jones',
         role: 'Director @ Aware Digital',
         image: andyJonesImage,
-        lightning: false,
         twitterUrl: 'https://twitter.com/awaredigital_uk',
+        lightning: false,
+        available: false,
       }, {
-        available: true,
+        name: 'Ash Allen',
+        role: 'Freelance Laravel Web Developer',
+        image: ashleyAllenImage,
+        twitterUrl: 'https://twitter.com/AshAllenDesign',
         lightning: true,
+        available: false,
       }, {
         available: true,
         lightning: true,
@@ -51,18 +58,21 @@ const days = [
         image: oliverDaviesImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/opdavies',
+        available: false,
       }, {
         name: 'Luke Browne',
         role: 'Lead Software Developer @ Wealth Wizards',
         image: lukeBrowneImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/lukebrwne',
+        available: false,
       }, {
         name: 'Christopher Miller',
         role: 'Developer @ Jump24',
         image: christopherMillerImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/ccmiller2018',
+        available: false,
       },
     ],
   },
@@ -171,6 +181,21 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
           <div className="space-y-1 text-lg font-medium leading-6">
             <h3 className="text-indigo-900">{speaker.name}</h3>
             <p className="mt-1 text-base tracking-tight text-slate-500">{speaker.role}</p>
+            <p className="text-indigo-900 text-sm">
+                {
+                    speaker.lightning ? (
+                      <div>
+                        <BoltIcon className="text-yellow-400 w-4 h-4 inline-block mr-2 -mt-1" />
+                        Lightning talk
+                      </div>
+                    ) : (
+                      <div>
+                        <AcademicCapIcon className="text-indigo-700 w-4 h-4 inline-block mr-2 -mt-1" />
+                        30 Minute Talk
+                      </div>
+                    )
+                }
+              </p>
           </div>
           <ul role="list" className="flex justify-center space-x-5">
             {
