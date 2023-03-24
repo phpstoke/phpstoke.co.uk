@@ -24,7 +24,7 @@ const days = [
       {
         name: 'James Seconde',
         role: 'Developer Advocate @ Vonage',
-        talk: null,
+        talk: 'What is performance-driven development and why aren\'t you doing it?',
         image: jamesSecondeImage,
         twitterUrl: 'https://twitter.com/SecondeJ',
         lightning: false,
