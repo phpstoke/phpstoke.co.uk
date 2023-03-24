@@ -11,6 +11,7 @@ import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
 import andyJonesImage from '@/images/avatars/andy-jones.jpg'
 import jamesSecondeImage from '@/images/avatars/james-seconde.jpg'
 import ashleyAllenImage from '@/images/avatars/ashley-allen.jpeg'
+import danWattImage from '@/images/avatars/dan-watt.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -23,6 +24,7 @@ const days = [
       {
         name: 'James Seconde',
         role: 'Developer Advocate @ Vonage',
+        talk: null,
         image: jamesSecondeImage,
         twitterUrl: 'https://twitter.com/SecondeJ',
         lightning: false,
@@ -30,21 +32,31 @@ const days = [
       }, {
         name: 'Andy Jones',
         role: 'Director @ Aware Digital',
+        talk: 'How Hyvä made Magento development quicker',
         image: andyJonesImage,
         twitterUrl: 'https://twitter.com/awaredigital_uk',
+        webUrl: 'https://awaredigital.co.uk',
         lightning: false,
         available: false,
       }, {
         name: 'Ash Allen',
         role: 'Freelance Laravel Web Developer',
+        talk: 'Using Database Transactions to Write Safer Laravel Code',
         image: ashleyAllenImage,
         twitterUrl: 'https://twitter.com/AshAllenDesign',
+        webUrl: 'https://ashallendesign.co.uk',
         lightning: true,
         available: false,
       }, {
-        available: true,
+        name: 'Dan Watt',
+        role: 'CTO @ Nutrition Integrated',
+        talk: 'My Data Visualisation Journey',
+        image: danWattImage,
+        twitterUrl: null,
+        webUrl: 'https://nutritionintegrated.com',
         lightning: true,
-      }
+        available: false,
+      },
     ],
   },
   {
@@ -55,20 +67,25 @@ const days = [
       {
         name: 'Oliver Davies',
         role: 'Lead Developer @ Transport for Wales',
+        talk: 'Things to know about PHP',
         image: oliverDaviesImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/opdavies',
+        webUrl: 'https://www.oliverdavies.uk',
         available: false,
       }, {
         name: 'Luke Browne',
         role: 'Lead Software Developer @ Wealth Wizards',
+        talk: 'Clean, concise, collaborative code',
         image: lukeBrowneImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/lukebrwne',
+        webUrl: 'https://www.luke-browne.com',
         available: false,
       }, {
         name: 'Christopher Miller',
         role: 'Developer @ Jump24',
+        talk: 'Ship every day, fail every day',
         image: christopherMillerImage,
         lightning: false,
         twitterUrl: 'https://twitter.com/ccmiller2018',
@@ -177,37 +194,53 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
             />
           </div>
         </div>
-        <div className="space-y-2 space-x-4 xl:flex xl:items-center xl:justify-between mt-8">
-          <div className="space-y-1 text-lg font-medium leading-6">
-            <h3 className="text-indigo-900">{speaker.name}</h3>
-            <p className="mt-1 text-base tracking-tight text-slate-500">{speaker.role}</p>
-            <p className="text-indigo-900 text-sm">
-                {
-                    speaker.lightning ? (
-                      <div>
-                        <BoltIcon className="text-yellow-400 w-4 h-4 inline-block mr-2 -mt-1" />
-                        Lightning talk
-                      </div>
-                    ) : (
-                      <div>
-                        <AcademicCapIcon className="text-indigo-700 w-4 h-4 inline-block mr-2 -mt-1" />
-                        30 Minute Talk
-                      </div>
-                    )
-                }
-              </p>
-          </div>
-          <ul role="list" className="flex justify-center space-x-5">
+        <div className="space-y-2 space-x-4 flex xl:items-center xl:justify-between mt-8 flex-row">
+          <div className="space-y-1 text-lg font-medium leading-6 grow">
+            <h2 className="text-indigo-900">{speaker.name}</h2>
             {
-                speaker.twitterUrl &&
-                <li>
-                  <a href={speaker.twitterUrl} className="text-gray-400 hover:text-gray-300">
-                    <span className="sr-only">Twitter</span>
-                    <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                </li>
+              speaker.talk ? (
+                <h3 className="text-indigo-700 tracking-tight text-base">{speaker.talk}</h3>
+              ) : null
+            }
+            <p className="mt-1 text-sm tracking-tight text-slate-500 break-all">{speaker.role}</p>
+            <div className="text-indigo-900 text-sm">
+              {
+                speaker.lightning ? (
+                  <div>
+                    <BoltIcon className="text-yellow-400 w-4 h-4 inline-block mr-2 -mt-1" />
+                    Lightning talk
+                  </div>
+                ) : (
+                  <div>
+                    <AcademicCapIcon className="text-indigo-700 w-4 h-4 inline-block mr-2 -mt-1" />
+                    30 Minute Talk
+                  </div>
+                )
+              }
+            </div>
+          </div>
+          <ul role="list" className="flex justify-center gap-x-5 items-center">
+            {
+              speaker.twitterUrl &&
+              <li>
+                <a href={speaker.twitterUrl} className="text-gray-400 hover:text-gray-300">
+                  <span className="sr-only">Twitter</span>
+                  <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+            }
+            {
+              speaker.webUrl &&
+              <li>
+                <a href={speaker.webUrl} className="text-gray-400 hover:text-gray-300">
+                  <span className="sr-only">Website</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                  </svg>
+                </a>
+              </li>
             }
           </ul>
         </div>
@@ -302,7 +335,7 @@ export function Speakers() {
             {days.map((day) => (
               <Tab.Panel
                 key={day.dateTime}
-                className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3 [&:not(:focus-visible)]:focus:outline-none"
+                className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-2 [&:not(:focus-visible)]:focus:outline-none"
                 unmount={false}
               >
                 {day.speakers.map((speaker, speakerIndex) => (
