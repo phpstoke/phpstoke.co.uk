@@ -6,7 +6,7 @@ import { Hero } from '@/components/Hero'
 import { Hosts } from '@/components/Hosts'
 import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
-import { Sponsors } from '@/components/Sponsors'
+import { PastSponsors, Sponsors } from '@/components/Sponsors'
 
 export async function getStaticProps() {
   return {
@@ -32,9 +32,10 @@ export default function Home({fullUrl}) {
       <Header />
       <main>
         <Hero />
+        <Sponsors />
         <Speakers />
         <Hosts />
-        <Sponsors />
+        <PastSponsors />
         <Newsletter />
       </main>
       <Footer />

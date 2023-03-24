@@ -271,7 +271,7 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="py-20 sm:py-32"
+      className="py-20 sm:py-20 lg:py-24 overflow-hidden"
     >
       <ImageClipPaths id={id} />
       <Container>
