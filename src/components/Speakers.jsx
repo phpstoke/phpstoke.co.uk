@@ -48,9 +48,9 @@ const days = [
         lightning: true,
         available: false,
       }, {
-        name: 'Dan Watt',
+        name: 'Daniel Watt',
         role: 'CTO @ Nutrition Integrated',
-        talk: 'My Data Visualisation Journey',
+        talk: 'Visualising Data: From Excel to JavaScript',
         image: danWattImage,
         twitterUrl: null,
         webUrl: 'https://nutritionintegrated.com',
