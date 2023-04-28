@@ -5,10 +5,20 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.jpg'
 
-import image2 from '@/images/events/phpstoke2.jpg'
-import image3 from '@/images/events/phpstoke3.jpg'
-import image4 from '@/images/events/phpstoke4.jpg'
-import image5 from '@/images/events/phpstoke5.jpg'
+// import image2 from '@/images/events/jan-2023/phpstoke2.jpg'
+// import image3 from '@/images/events/jan-2023/phpstoke3.jpg'
+// import image4 from '@/images/events/jan-2023/phpstoke4.jpg'
+// import image5 from '@/images/events/jan-2023/phpstoke5.jpg'
+
+import image6 from '@/images/events/apr-2023/phpstoke1.jpg'
+import image7 from '@/images/events/apr-2023/phpstoke2.jpg'
+import image8 from '@/images/events/apr-2023/phpstoke3.jpg'
+import image9 from '@/images/events/apr-2023/phpstoke4.jpg'
+import image10 from '@/images/events/apr-2023/phpstoke5.jpg'
+import image11 from '@/images/events/apr-2023/phpstoke6.jpg'
+import image12 from '@/images/events/apr-2023/phpstoke7.jpg'
+import image13 from '@/images/events/apr-2023/phpstoke8.jpg'
+import image14 from '@/images/events/apr-2023/phpstoke9.jpg'
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
@@ -16,7 +26,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image6, image10, image9, image7, image8, image11, image12, image13, image14].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -66,13 +76,14 @@ export function Hero() {
               PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
             </p>
           </div>
-          <Button href="https://php-stoke.eventbrite.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">
+          {/*<Button href="https://php-stoke.eventbrite.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">
             Get your FREE ticket
-          </Button>
+          </Button>*/}
+          <Button href="https://php-stoke.getsendstack.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">Get Notified</Button>
           <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Talks', '3'],
-              ['Attendees', '40+'],
+              ['Attendees', '59+'],
               ['Venue', 'The Smithfield Works'],
               ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
