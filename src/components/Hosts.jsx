@@ -10,7 +10,7 @@ import richImage from '@/images/avatars/rich-jones.jpg'
 const people = [
   {
     name: 'James Brooks',
-    image:jamesImage,
+    image: jamesImage,
     twitterUrl: 'https://twitter.com/jbrooksuk',
     website: 'https://james.brooks.page/?ref=phpstoke',
     role: 'Developer at Laravel'
