@@ -20,10 +20,10 @@ export default function Home({fullUrl}) {
   return (
     <>
       <Head>
-        <title>PHP Stoke - The Stoke-on-Trent PHP meetup.</title>
+        <title>PHP Stoke - The Stoke-on-Trent PHP meet-up.</title>
         <meta
           name="description"
-          content="PHP Stoke is a free meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink."
+          content="PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink."
         />
 
         <meta property="og:url" content={fullUrl} key="ogUrl" />

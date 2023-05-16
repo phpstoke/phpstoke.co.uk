@@ -32,7 +32,7 @@ export function Sponsors() {
             Sponsors
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Thank you to the sponsors who make our meetup possible.
+            Thank you to the sponsors who make our meet-up possible.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 sm:grid-cols-3 md:gap-x-8 lg:gap-x-32">
