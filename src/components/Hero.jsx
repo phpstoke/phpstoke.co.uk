@@ -70,19 +70,18 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
-              The Stoke-on-Trent PHP meetup, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.
+              The Stoke-on-Trent PHP meet-up, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.
             </p>
             <p>
-              PHP Stoke is a <strong className="highlight">free</strong> meetup in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
+              PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
             </p>
           </div>
-          {/*<Button href="https://php-stoke.eventbrite.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">
+          <Button href="https://www.eventbrite.com/e/php-stoke-aug-3rd-2023-tickets-637262518347?ref=phpstoke" className="mt-10 w-full sm:hidden">
             Get your FREE ticket
-          </Button>*/}
-          <Button href="https://php-stoke.getsendstack.com/?ref=phpstoke" className="mt-10 w-full sm:hidden">Get Notified</Button>
-          <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
+          </Button>
+          <dl className="grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Talks', '3'],
+              ['Talks', '4'],
               ['Attendees', '59+'],
               ['Venue', 'The Smithfield Works'],
               ['What3Words', '///melon.prices.soil'],
