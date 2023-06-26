@@ -66,7 +66,7 @@ export function Newsletter() {
                     type="email"
                     placeholder="Email address"
                     aria-label="Email address"
-                    className="-my-2.5 flex-auto bg-transparent pl-6 pr-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:outline-none"
+                    className="-my-2.5 flex-auto bg-transparent pl-6 pr-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:outline-none rounded-l-3xl"
                     name="email"
                   />
                   <Button type="submit">
