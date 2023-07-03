@@ -12,6 +12,7 @@ import andyJonesImage from '@/images/avatars/andy-jones.jpg'
 import jamesSecondeImage from '@/images/avatars/james-seconde.jpg'
 import ashleyAllenImage from '@/images/avatars/ashley-allen.jpeg'
 import danWattImage from '@/images/avatars/dan-watt.jpeg'
+import ryanLeeImage from '@/images/avatars/ryan-lee.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -22,8 +23,12 @@ const days = [
     dateTime: '2023-08-03 18:30',
     speakers: [
       {
+        name: 'Ryan Lee',
+        role: null,
+        talk: 'A bref introduction to serverless PHP',
+        image: ryanLeeImage,
         lightning: false,
-        available: true,
+        available: false,
       }, {
         lightning: false,
         available: true,
