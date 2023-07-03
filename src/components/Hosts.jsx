@@ -46,7 +46,7 @@ export function Hosts() {
           <div className="space-y-12">
             <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
               <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-                PHP Stoke is organised by James Brooks from <span className="highlight">Laravel</span> and Andy &amp; Rich Jones from <span className="highlight">Aware Digital</span>.
+                PHP Stoke is organised by James Brooks from <a className="highlight underline" href="https://laravel.com/?ref=phpstoke">Laravel</a> and Andy &amp; Rich Jones from <a className="highlight underline" href="https://awaredigital.co.uk/?ref=phpstoke">Aware Digital</a>.
               </p>
             </div>
             <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
