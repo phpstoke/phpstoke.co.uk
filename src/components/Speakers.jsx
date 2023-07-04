@@ -27,6 +27,7 @@ const days = [
         role: null,
         talk: 'A bref introduction to serverless PHP',
         image: ryanLeeImage,
+        webUrl: 'http://ryan.gd',
         lightning: false,
         available: false,
       }, {
