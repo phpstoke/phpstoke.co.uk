@@ -13,6 +13,7 @@ import jamesSecondeImage from '@/images/avatars/james-seconde.jpg'
 import ashleyAllenImage from '@/images/avatars/ashley-allen.jpeg'
 import danWattImage from '@/images/avatars/dan-watt.jpeg'
 import ryanLeeImage from '@/images/avatars/ryan-lee.jpg'
+import kseniaZverevaImage from '@/images/avatars/ksenia-zvereva.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -31,8 +32,13 @@ const days = [
         lightning: false,
         available: false,
       }, {
+        name: 'Ksenia Zvereva',
+        role: 'Developer Community Lead',
+        talk: 'Power of Community: How to build your personal brand as a developer',
+        image: kseniaZverevaImage,
+        webUrl: 'http://mollie.com',
         lightning: false,
-        available: true,
+        available: false,
       }, {
         lightning: true,
         available: true,
