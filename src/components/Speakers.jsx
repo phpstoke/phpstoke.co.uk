@@ -36,6 +36,7 @@ const days = [
         role: 'Developer Community Lead',
         talk: 'Power of Community: How to build your personal brand as a developer',
         image: kseniaZverevaImage,
+        twitterUrl: 'https://twitter.com/frainpan',
         webUrl: 'http://mollie.com',
         lightning: false,
         available: false,
