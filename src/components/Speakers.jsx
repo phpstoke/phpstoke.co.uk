@@ -14,6 +14,7 @@ import ashleyAllenImage from '@/images/avatars/ashley-allen.jpeg'
 import danWattImage from '@/images/avatars/dan-watt.jpeg'
 import ryanLeeImage from '@/images/avatars/ryan-lee.jpg'
 import kseniaZverevaImage from '@/images/avatars/ksenia-zvereva.jpeg'
+import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -41,8 +42,14 @@ const days = [
         lightning: false,
         available: false,
       }, {
+        name: 'Rajkumar Sakthivel',
+        role: 'Developer @ Dragoonis Technologies',
+        talk: 'Minimalism in DevOps',
+        image: rajSakthivelImage,
+        twitterUrl: 'https://twitter.com/rajkumarsakthi',
+        webUrl: 'https://linktr.ee/rajkumarsakthi',
         lightning: true,
-        available: true,
+        available: false,
       }, {
         lightning: true,
         available: true,
