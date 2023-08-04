@@ -43,7 +43,7 @@ export function Newsletter() {
             </div>
             <div>
               <h3 className="text-lg font-semibold tracking-tight text-indigo-900">
-                Sign up to our newsletter <span aria-hidden="true">&darr;</span>
+                Sign up to our newsletter <span aria-hidden="true">👇</span>
               </h3>
               <form
                 data-sendstack-form

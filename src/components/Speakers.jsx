@@ -50,9 +50,6 @@ const days = [
         webUrl: 'https://linktr.ee/rajkumarsakthi',
         lightning: true,
         available: false,
-      }, {
-        lightning: true,
-        available: true,
       },
     ],
   },

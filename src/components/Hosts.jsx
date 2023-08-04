@@ -18,11 +18,13 @@ const people = [
     name: 'Andy Jones',
     image: andyImage,
     website: 'https://awaredigital.co.uk/?ref=phpstoke',
+    twitterUrl: 'https://twitter.com/andyjoneski',
     role: 'Director at Aware Digital',
   }, {
     name: 'Rich Jones',
     image: richImage,
     website: 'https://awaredigital.co.uk/?ref=phpstoke',
+    twitterUrl: 'https://twitter.com/awaredigital',
     role: 'Director at Aware Digital',
   },
 ]

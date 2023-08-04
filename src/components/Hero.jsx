@@ -73,7 +73,7 @@ export function Hero() {
               The Stoke-on-Trent PHP meet-up, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.
             </p>
             <p>
-              PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
+              PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤
             </p>
           </div>
           <Button href="https://www.eventbrite.com/e/php-stoke-aug-3rd-2023-tickets-637262518347?ref=phpstoke" className="mt-10 w-full sm:hidden">
