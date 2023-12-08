@@ -70,7 +70,8 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
-              The Stoke-on-Trent PHP meet-up, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.
+              {/*The Stoke-on-Trent PHP meet-up, hosted at <a href="https://smithfield-works.com/?ref=phpstoke" className="underline hover:text-indigo-600">The Smithfield Works in Hanley</a>.*/}
+              The Stoke-on-Trent PHP meet-up.
             </p>
             <p>
               PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤
@@ -83,8 +84,9 @@ export function Hero() {
             {[
               ['Talks', '4'],
               ['Attendees', '59+'],
-              ['Venue', 'The Smithfield Works'],
-              ['What3Words', '///melon.prices.soil'],
+              // ['Venue', 'The Smithfield Works'],
+              ['Venue', 'TBC'],
+              // ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-indigo-600">{name}</dt>
