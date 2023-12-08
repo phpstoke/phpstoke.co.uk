@@ -15,6 +15,7 @@ import danWattImage from '@/images/avatars/dan-watt.jpeg'
 import ryanLeeImage from '@/images/avatars/ryan-lee.jpg'
 import kseniaZverevaImage from '@/images/avatars/ksenia-zvereva.jpeg'
 import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
+import gregMayes from '@/images/avatars/greg-mayes.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -31,8 +32,14 @@ const days = [
         lightning: false, 
         available: true, 
       }, {
-        lightning: true, 
-        available: true, 
+        name: 'Greg Mayes',
+        role: 'Software Engineer',
+        talk: 'Low Effort PHP Micro-optimisations',
+        image: gregMayes,
+        twitterUrl: 'https://twitter.com/gregmayesdev',
+        webUrl: 'http://gregmayes.dev',
+        lightning: true,
+        available: false,
       }, {
         lightning: true, 
         available: true, 
