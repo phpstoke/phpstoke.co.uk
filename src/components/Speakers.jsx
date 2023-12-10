@@ -16,6 +16,7 @@ import ryanLeeImage from '@/images/avatars/ryan-lee.jpg'
 import kseniaZverevaImage from '@/images/avatars/ksenia-zvereva.jpeg'
 import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
 import gregMayes from '@/images/avatars/greg-mayes.jpg'
+import michaelConnelly from '@/images/avatars/michael-connelly.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -26,8 +27,14 @@ const days = [
     dateTime: '2024-01-18',
     speakers: [
       {
-        lightning: false, 
-        available: true, 
+        name: 'Michael Connelly',
+        role: 'Developer at Fabric',
+        talk: 'Up Up Down Down Left Right Left Right Composer Require Livewire',
+        image: michaelConnelly,
+        twitterUrl: 'https://twitter.com/mike_c_dev',
+        webUrl: 'http://madebyfabric.uk',
+        lightning: false,
+        available: false,
       }, {
         lightning: false, 
         available: true, 
