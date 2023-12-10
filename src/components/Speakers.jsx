@@ -32,7 +32,7 @@ const days = [
         talk: 'Up Up Down Down Left Right Left Right Composer Require Livewire',
         image: michaelConnelly,
         twitterUrl: 'https://twitter.com/mike_c_dev',
-        webUrl: 'http://madebyfabric.uk',
+        webUrl: 'https://madebyfabric.uk',
         lightning: false,
         available: false,
       }, {
@@ -44,7 +44,7 @@ const days = [
         talk: 'Low Effort PHP Micro-optimisations',
         image: gregMayes,
         twitterUrl: 'https://twitter.com/gregmayesdev',
-        webUrl: 'http://gregmayes.dev',
+        webUrl: 'https://gregmayes.dev',
         lightning: true,
         available: false,
       }, {
@@ -63,7 +63,7 @@ const days = [
         role: null,
         talk: 'A bref introduction to serverless PHP',
         image: ryanLeeImage,
-        webUrl: 'http://ryan.gd',
+        webUrl: 'https://ryan.gd',
         lightning: false,
         available: false,
       }, {
@@ -72,7 +72,7 @@ const days = [
         talk: 'Power of Community: How to build your personal brand as a developer',
         image: kseniaZverevaImage,
         twitterUrl: 'https://twitter.com/frainpan',
-        webUrl: 'http://mollie.com',
+        webUrl: 'https://mollie.com',
         lightning: false,
         available: false,
       }, {
