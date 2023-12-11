@@ -28,7 +28,7 @@ const days = [
     speakers: [
       {
         name: 'Michael Connelly',
-        role: 'Developer at Fabric',
+        role: 'Software Engineer at Fabric',
         talk: 'Up Up Down Down Left Right Left Right Composer Require Livewire',
         image: michaelConnelly,
         twitterUrl: 'https://twitter.com/mike_c_dev',
