@@ -17,6 +17,7 @@ import kseniaZverevaImage from '@/images/avatars/ksenia-zvereva.jpeg'
 import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
 import gregMayes from '@/images/avatars/greg-mayes.jpg'
 import michaelConnelly from '@/images/avatars/michael-connelly.jpg'
+import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -36,8 +37,14 @@ const days = [
         lightning: false,
         available: false,
       }, {
-        lightning: false, 
-        available: true, 
+        name: 'Harry Messenger',
+        role: 'Senior Full Stack Developer at Wealth At Work',
+        talk: 'The Real Time Web using Laravel',
+        image: harryMessenger,
+        twitterUrl: 'https://twitter.com/harrysmessenger',
+        webUrl: 'https://hsmess.dev',
+        lightning: false,
+        available: false,
       }, {
         name: 'Greg Mayes',
         role: 'Software Engineer',
