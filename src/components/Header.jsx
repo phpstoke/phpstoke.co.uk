@@ -15,8 +15,8 @@ export function Header() {
             <p>
               <time dateTime="2024-01-18">Thursday 18th January, 2024 @ 6:30pm</time>
             </p>
-            {/*<DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" />*/}
-            {/*<p className="overflow-hidden text-ellipsis">Smithfield Works, Hanley</p>*/}
+            <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" />
+            <p className="overflow-hidden text-ellipsis">Smithfield Works, Hanley</p>
           </div>
           {/*<div className="mx-auto flex items-center gap-2 px-4 overflow-hidden sm:gap-4">*/}
           {/*  <p>*/}
@@ -27,8 +27,8 @@ export function Header() {
           {/*</div>*/}
         </div>
         <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
-          {/*<Button href="https://www.eventbrite.com/e/php-stoke-aug-3rd-2023-tickets-637262518347?ref=phpstoke">Get your FREE tickets</Button>*/}
-          <Button href="#newsletter">Get Notified</Button>
+          <Button href="https://www.meetup.com/php-stoke/events/298047855/?ref=phpstoke">Get your FREE tickets</Button>
+          {/*<Button href="#newsletter">Get Notified</Button>*/}
         </div>
       </Container>
     </header>
