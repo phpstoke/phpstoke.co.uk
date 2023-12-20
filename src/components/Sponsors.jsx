@@ -10,13 +10,13 @@ import logoPalletOnline from '@/images/logos/palletonline.svg'
 import logoMollie from '@/images/logos/mollie.svg'
 
 const sponsors = [
+  { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
 
 const pastSponsors = [
   { name: 'Mollie', logo: logoMollie, link: 'https://mollie.com/?ref=phpstoke' },
-  { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
   { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
   { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
