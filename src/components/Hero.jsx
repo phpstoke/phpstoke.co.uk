@@ -83,9 +83,8 @@ export function Hero() {
             {[
               ['Talks', '4'],
               ['Attendees', '59+'],
-              // ['Venue', 'The Smithfield Works'],
-              ['Venue', 'TBC'],
-              // ['What3Words', '///melon.prices.soil'],
+              ['Venue', 'The Smithfield Works'],
+              ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-indigo-600">{name}</dt>
