@@ -18,7 +18,7 @@ import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
 import gregMayes from '@/images/avatars/greg-mayes.jpg'
 import michaelConnelly from '@/images/avatars/michael-connelly.jpg'
 import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
-import adamDavis from '@/images/avatars/adam-davis.jpg'
+// import adamDavis from '@/images/avatars/adam-davis.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -55,7 +55,7 @@ const days = [
         webUrl: 'https://gregmayes.dev',
         lightning: true,
         available: false,
-      }, {
+      }, /* {
         name: 'Adam Davis',
         role: 'Systems Development Manager at Bet365',
         talk: 'Building Scalable Software Teams',
@@ -63,7 +63,7 @@ const days = [
         linkedInUrl: 'https://www.linkedin.com/in/davisadam/',
         lightning: true,
         available: false,
-      }
+      } */
     ]
   },
   {
