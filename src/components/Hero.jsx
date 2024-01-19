@@ -76,8 +76,8 @@ export function Hero() {
               PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤
             </p>
           </div>
-          <Button href="https://www.meetup.com/php-stoke/events/298047855/?ref=phpstoke" className="mt-10 w-full sm:hidden">
-            Get your FREE ticket
+          <Button href="https://www.meetup.com/php-stoke/" className="my-10 w-full sm:hidden">
+            Join us on Meetup
           </Button>
           <dl className="grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
