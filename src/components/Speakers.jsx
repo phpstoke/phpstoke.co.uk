@@ -18,6 +18,7 @@ import rajSakthivelImage from '@/images/avatars/raj-sakthivel.jpeg'
 import gregMayes from '@/images/avatars/greg-mayes.jpg'
 import michaelConnelly from '@/images/avatars/michael-connelly.jpg'
 import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
+import mattDavis from '@/images/avatars/matt-davis.jpg'
 // import adamDavis from '@/images/avatars/adam-davis.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
@@ -25,12 +26,18 @@ import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 const days = [
   {
     name: 'PHP Stoke #5',
-    date: 'Apr, 2024',
+    date: 'Apr 11th, 2024',
     dateTime: '2024-04-11',
     speakers: [
       {
-        available: true,
+        name: 'Matt Davis',
+        role: 'CTO at Mumsnet',
+        talk: 'Disagree Better',
+        image: mattDavis,
+        twitterUrl: 'mdavis1982',
+        webUrl: 'https://www.mattdavis.co.uk/',
         lightning: false,
+        available: false,
       }, {
         available: true,
         lightning: false,
@@ -53,7 +60,7 @@ const days = [
         role: 'Software Engineer at Fabric',
         talk: 'Up Up Down Down Left Right Left Right Composer Require Livewire',
         image: michaelConnelly,
-        twitterUrl: 'https://twitter.com/mike_c_dev',
+        twitterUrl: 'mike_c_dev',
         webUrl: 'https://madebyfabric.uk',
         lightning: false,
         available: false,
@@ -62,7 +69,7 @@ const days = [
         role: 'Senior Full Stack Developer at Wealth At Work',
         talk: 'The Real Time Web using Laravel',
         image: harryMessenger,
-        twitterUrl: 'https://twitter.com/harrysmessenger',
+        twitterUrl: 'harrysmessenger',
         webUrl: 'https://hsmess.dev',
         lightning: false,
         available: false,
@@ -71,7 +78,7 @@ const days = [
         role: 'Software Engineer',
         talk: 'Low Effort PHP Micro-optimisations',
         image: gregMayes,
-        twitterUrl: 'https://twitter.com/gregmayesdev',
+        twitterUrl: 'gregmayesdev',
         webUrl: 'https://gregmayes.dev',
         lightning: true,
         available: false,
@@ -104,7 +111,7 @@ const days = [
         role: 'Developer Community Lead',
         talk: 'Power of Community: How to build your personal brand as a developer',
         image: kseniaZverevaImage,
-        twitterUrl: 'https://twitter.com/frainpan',
+        twitterUrl: 'frainpan',
         webUrl: 'https://mollie.com',
         lightning: false,
         available: false,
@@ -113,7 +120,7 @@ const days = [
         role: 'Developer @ Dragoonis Technologies',
         talk: 'Minimalism in DevOps',
         image: rajSakthivelImage,
-        twitterUrl: 'https://twitter.com/rajkumarsakthi',
+        twitterUrl: 'rajkumarsakthi',
         webUrl: 'https://linktr.ee/rajkumarsakthi',
         lightning: true,
         available: false,
@@ -130,7 +137,7 @@ const days = [
         role: 'Developer Advocate @ Vonage',
         talk: 'What is performance-driven development and why aren\'t you doing it?',
         image: jamesSecondeImage,
-        twitterUrl: 'https://twitter.com/SecondeJ',
+        twitterUrl: 'SecondeJ',
         lightning: false,
         available: false,
       }, {
@@ -138,7 +145,7 @@ const days = [
         role: 'Director @ Aware Digital',
         talk: 'How Hyvä made Magento development quicker',
         image: andyJonesImage,
-        twitterUrl: 'https://twitter.com/awaredigital_uk',
+        twitterUrl: 'awaredigital_uk',
         webUrl: 'https://awaredigital.co.uk',
         lightning: false,
         available: false,
@@ -147,7 +154,7 @@ const days = [
         role: 'Freelance Laravel Web Developer',
         talk: 'Using Database Transactions to Write Safer Laravel Code',
         image: ashleyAllenImage,
-        twitterUrl: 'https://twitter.com/AshAllenDesign',
+        twitterUrl: 'AshAllenDesign',
         webUrl: 'https://ashallendesign.co.uk',
         lightning: true,
         available: false,
@@ -174,7 +181,7 @@ const days = [
         talk: 'Things to know about PHP',
         image: oliverDaviesImage,
         lightning: false,
-        twitterUrl: 'https://twitter.com/opdavies',
+        twitterUrl: 'opdavies',
         webUrl: 'https://www.oliverdavies.uk',
         available: false,
       }, {
@@ -183,7 +190,7 @@ const days = [
         talk: 'Clean, concise, collaborative code',
         image: lukeBrowneImage,
         lightning: false,
-        twitterUrl: 'https://twitter.com/lukebrwne',
+        twitterUrl: 'lukebrwne',
         webUrl: 'https://www.luke-browne.com',
         available: false,
       }, {
@@ -192,7 +199,7 @@ const days = [
         talk: 'Ship every day, fail every day',
         image: christopherMillerImage,
         lightning: false,
-        twitterUrl: 'https://twitter.com/ccmiller2018',
+        twitterUrl: 'ccmiller2018',
         available: false,
       },
     ],
@@ -291,7 +298,9 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
           >
             <Image
                 className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                src={speaker.image}
+                src={speaker.image || `https://unavatar.io/twitter/${encodeURI(speaker.twitterUrl)}`}
+                width={1024}
+                height={1024}
                 alt=""
                 priority
                 sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -327,7 +336,7 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
             {
               speaker.twitterUrl &&
               <li>
-                <a href={speaker.twitterUrl} className="text-gray-400 hover:text-gray-300">
+                <a href={`https://twitter.com/${speaker.twitterUrl}`} className="text-gray-400 hover:text-gray-300">
                   <span className="sr-only">Twitter</span>
                   <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
