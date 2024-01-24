@@ -13,7 +13,7 @@ export function Header() {
         <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto whitespace-nowrap border-b border-indigo-600/10 py-4 font-mono text-sm text-indigo-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-2 px-4 overflow-hidden sm:gap-4">
             <p>
-              <time dateTime="2024-04-11">Thursday 11th January, 2024 @ 6:30pm</time>
+              <time dateTime="2024-04-11">Thursday 11th April, 2024 @ 6:30pm</time>
             </p>
             <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" />
             <p className="overflow-hidden text-ellipsis">Smithfield Works, Hanley</p>
