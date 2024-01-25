@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import { News } from '@/components/News'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -29,6 +30,7 @@ export default function Home({fullUrl}) {
         <meta property="og:url" content={fullUrl} key="ogUrl" />
         <meta name="twitter:url" content={fullUrl} key="twitterUrl" />
       </Head>
+      <News />
       <Header />
       <main>
         <Hero />
