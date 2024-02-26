@@ -9,13 +9,13 @@ import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
 import { PastSponsors, Sponsors } from '@/components/Sponsors'
 
-export async function getStaticProps() {
+export const getStaticProps = (async (context) => {
   return {
     props: {
       fullUrl: process.env.FULL_URL,
     }
   }
-}
+})
 
 export default function Home({fullUrl}) {
   return (
