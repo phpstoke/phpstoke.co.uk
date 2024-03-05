@@ -20,6 +20,7 @@ import michaelConnelly from '@/images/avatars/michael-connelly.jpg'
 import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
 import mattDavis from '@/images/avatars/matt-davis.jpg'
 import adamDavis from '@/images/avatars/adam-davis.jpg'
+import ryanChandler from '@/images/avatars/ryan-chandler.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -39,8 +40,14 @@ const days = [
         lightning: false,
         available: false,
       }, {
-        available: true,
+        name: 'Ryan Chandler',
+        role: 'Senior Software Developer',
+        talk: 'Running PHP at lightspeed',
+        image: ryanChandler,
+        twitterUrl: 'ryangjchandler',
+        webUrl: 'https://ryangjchandler.co.uk/',
         lightning: false,
+        available: false,
       }, {
         name: 'Adam Davis',
         role: 'Systems Development Manager at Bet365',
