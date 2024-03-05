@@ -30,7 +30,7 @@ export default function Home({fullUrl}) {
         <meta property="og:url" content={fullUrl} key="ogUrl" />
         <meta name="twitter:url" content={fullUrl} key="twitterUrl" />
       </Head>
-      <News />
+      {/*<News />*/}
       <Header />
       <main>
         <Hero />
