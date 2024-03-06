@@ -8,8 +8,10 @@ import logoSendStack from '@/images/logos/sendstack.svg'
 import logoKlarna from '@/images/logos/klarna.svg'
 import logoPalletOnline from '@/images/logos/palletonline.svg'
 import logoMollie from '@/images/logos/mollie.svg'
+import jumpTwentyFour from '@/images/logos/jump24.svg'
 
 const sponsors = [
+  { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
