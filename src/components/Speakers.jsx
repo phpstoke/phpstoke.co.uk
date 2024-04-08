@@ -21,6 +21,7 @@ import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
 import mattDavis from '@/images/avatars/matt-davis.jpg'
 import adamDavis from '@/images/avatars/adam-davis.jpg'
 import ryanChandler from '@/images/avatars/ryan-chandler.jpg'
+import grahamCampbell from '@/images/avatars/graham-campbell.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -57,8 +58,13 @@ const days = [
         lightning: true,
         available: false,
       }, {
-        available: true,
+        name: 'Graham Campbell',
+        role: 'Principal Software Architect',
+        talk: 'Scaling MySQL in Laravel',
+        image: grahamCampbell,
+        twitterUrl: 'grahamjcampbell',
         lightning: true,
+        available: false,
       }
     ]
   },
