@@ -8,14 +8,28 @@ import { Hosts } from '@/components/Hosts'
 import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
 import { PastSponsors, Sponsors } from '@/components/Sponsors'
+import {previewlinks} from "@/lib/previewlinks";
 
-export const getStaticProps = (async (context) => {
-  return {
-    props: {
-      fullUrl: process.env.FULL_URL,
+export async function getServerSideProps(context) {
+    const preview = await previewlinks.downloadImage({
+        siteId: 764,
+        templateId: 1013,
+        fields: {
+            'previewlinks:overline': 'The Stoke-on-Trent PHP Meet-Up',
+            'previewlinks:title': 'PHP Stoke',
+            'previewlinks:subtitle': 'PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.',
+            'previewlinks:repository': 'Thursday, 18th July 2024',
+            'previewlinks:image': 'https://phpstoke.co.uk/android-chrome-512x512.png',
+        },
+    }).then((response) => response.data)
+
+    return {
+        props: {
+            fullUrl: process.env.FULL_URL,
+            preview: preview.data.url,
+        },
     }
-  }
-})
+}
 
 export default function Home({fullUrl}) {
   return (

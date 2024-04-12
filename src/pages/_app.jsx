@@ -27,7 +27,7 @@ export default function App({ Component, pageProps, router }) {
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('ZVDKXCHJ', {
       includedDomains: ['phpstoke.co.uk'],
-    });
+    })
 
     function onRouteChangeComplete() {
       Fathom.trackPageview();
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps, router }) {
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete);
     };
-  }, []);
+  }, [])
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function App({ Component, pageProps, router }) {
         <meta property="og:title" content="PHP Stoke" />
         <meta property="og:url" key="ogUrl" />
         <meta property="og:locale" content="en_GB" />
-        <meta property="og:image" content="https://phpstoke.co.uk/og.png" />
+        <meta property="og:image" content={pageProps.preview} />
         <meta property="og:description" content="PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@ export default function App({ Component, pageProps, router }) {
         <meta name="twitter:creator" content="@phpstoke" />
         <meta name="twitter:url" key="twitterUrl" />
         <meta name="twitter:title" content="PHP Stoke" />
-        <meta name="twitter:image" content="https://phpstoke.co.uk/og.png" />
+        <meta name="twitter:image" content={pageProps.preview} />
         <meta name="twitter:description" content="PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
       </Head>
 
