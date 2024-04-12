@@ -27,7 +27,7 @@ export function Header() {
           {/*</div>*/}
         </div>
         <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
-          <Button href="https://www.meetup.com/php-stoke/events/298654820/">Get Your Ticket</Button>
+          <Button href="https://www.meetup.com/php-stoke/events/300346017/">Get Your Ticket</Button>
         </div>
       </Container>
     </header>
