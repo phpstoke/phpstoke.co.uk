@@ -26,6 +26,23 @@ import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
 const days = [
   {
+    name: 'PHP Stoke #6',
+    date: 'Jul 18th, 2024',
+    dateTime: '2024-07-18',
+    speakers: [
+      {
+        available: true,
+        lightning: false,
+      }, {
+        available: true,
+        lightning: true,
+      }, {
+        available: true,
+        lightning: true,
+      }
+    ],
+  },
+  {
     name: 'PHP Stoke #5',
     date: 'Apr 11th, 2024',
     dateTime: '2024-04-11',
