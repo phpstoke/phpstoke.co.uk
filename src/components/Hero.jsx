@@ -81,9 +81,8 @@ export function Hero() {
           </Button>
           <dl className="grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Talks', '4'],
-              ['Attendees', '59+'],
-              ['Venue', 'The Smithfield Works'],
+              ['Members', '118+'],
+              ['Venue', 'The Smithfield Works, Stoke-on-Trent'],
               ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
