@@ -20,6 +20,8 @@ import image12 from '@/images/events/apr-2023/phpstoke7.jpg'
 import image13 from '@/images/events/apr-2023/phpstoke8.jpg'
 import image14 from '@/images/events/apr-2023/phpstoke9.jpg'
 
+import event from "@/event";
+
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
@@ -66,7 +68,7 @@ export function Hero() {
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-indigo-600 sm:text-7xl">
-            PHP Stoke
+            {event.title}
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-indigo-900">
             <p>
@@ -76,13 +78,13 @@ export function Hero() {
               PHP Stoke is a <strong className="highlight">free</strong> meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤
             </p>
           </div>
-          <Button href="https://www.meetup.com/php-stoke/" className="my-10 w-full sm:hidden">
+          <Button href={event.meetupUrl} className="my-10 w-full sm:hidden">
             Join us on Meetup
           </Button>
           <dl className="grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-8 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Members', '118+'],
-              ['Venue', 'The Smithfield Works, Stoke-on-Trent'],
+              ['Members', event.members],
+              ['Venue', event.location],
               ['What3Words', '///melon.prices.soil'],
             ].map(([name, value]) => (
               <div key={name}>
