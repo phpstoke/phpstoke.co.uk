@@ -2,15 +2,8 @@
 Organiser: James Brooks
 Contact: james@alt-three.com
 Twitter: @jbrooksuk
+Link: https://pinkary.com/@jbrooksuk
 Company: Laravel
-
-Organiser: Andy Jones
-Contact: andy@awaredigital.co.uk
-Company: Aware Digital
-
-Organiser: Rich Jones
-Contact: rich@awaredigital.co.uk
-Company: Aware Digital
 
 /* EVENT */
 Event: PHP Stoke

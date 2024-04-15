@@ -3,29 +3,15 @@ import Image from 'next/image'
 
 import { GlobeAltIcon } from '@/components/GlobeAltIcon'
 
-import andyImage from '@/images/avatars/andy-jones.jpg'
 import jamesImage from '@/images/avatars/james-brooks.jpg'
-import richImage from '@/images/avatars/rich-jones.jpg'
 
 const people = [
   {
     name: 'James Brooks',
     image: jamesImage,
     twitterUrl: 'https://twitter.com/jbrooksuk',
-    website: 'https://james.brooks.page/?ref=phpstoke',
+    website: 'https://pinkary.com/@jbrooksuk?ref=phpstoke',
     role: 'Software Engineer at Laravel'
-  }, {
-    name: 'Andy Jones',
-    image: andyImage,
-    website: 'https://awaredigital.co.uk/?ref=phpstoke',
-    twitterUrl: 'https://twitter.com/andyjoneski',
-    role: 'Director at Aware Digital',
-  }, {
-    name: 'Rich Jones',
-    image: richImage,
-    website: 'https://awaredigital.co.uk/?ref=phpstoke',
-    twitterUrl: 'https://twitter.com/awaredigital',
-    role: 'Director at Aware Digital',
   },
 ]
 
@@ -48,12 +34,12 @@ export function Hosts() {
           <div className="space-y-12">
             <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
               <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-                PHP Stoke is organised by <a className="highlight underline" href="https://james.brooks.page/?ref=phpstoke">James Brooks</a> and <a className="highlight underline" href="https://awaredigital.co.uk/?ref=phpstoke">Aware Digital</a>.
+                PHP Stoke is organised by <a className="highlight underline" href="https://pinkary.com/@jbrooksuk/?ref=phpstoke">James Brooks</a>.
               </p>
             </div>
-            <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
+            <ul role="list" className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0  lg:gap-8">
               {people.map((person) => (
-                <li key={person.name} className="md:rounded-5xl bg-indigo-50 py-10 px-6 text-center xl:px-10 xl:text-left">
+                <li key={person.name} className="rounded-xl md:rounded-5xl bg-indigo-50 py-10 px-6 text-center xl:px-10 xl:text-left col-start-1 col-span-3 lg:col-start-2 lg:col-span-1">
                   <div className="space-y-6 xl:space-y-10">
                     <Image className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" src={person.image} alt="" />
                     <div className="space-y-2 xl:flex xl:items-center xl:justify-between">

@@ -11,8 +11,8 @@ export function Footer() {
             Copyright &copy; {new Date().getFullYear()} PHP Stoke. All
             rights reserved.
           </p>
-          <p className="mt-6 text-base text-slate-500 md:mt-0 text-sm">
-            PHP Stoke is organised by <a href="https://twitter.com/jbrooksuk" className="hover:text-indigo-500 font-semibold">James Brooks</a> &amp; <a href="https://awaredigital.co.uk/?ref=phpstoke" className="hover:text-indigo-500 font-semibold">Aware Digital</a>.
+          <p className="mt-6 text-base text-slate-500 md:mt-0 md:text-sm">
+            PHP Stoke is organised by <a href="https://pinkary.com/@jbrooksuk" className="hover:text-indigo-500 font-semibold">James Brooks</a>.
           </p>
         </div>
       </Container>
