@@ -5,7 +5,11 @@ updates:
     schedule:
       interval: weekly
       day: monday
-    open-pull-requests-limit: 3
+    groups:
+      js-dependencies:
+        update-types:
+          - "minor"
+          - "patch"
     allow:
       - dependency-type: direct
     versioning-strategy: increase-if-necessary
