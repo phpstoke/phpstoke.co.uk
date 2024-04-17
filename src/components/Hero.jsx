@@ -23,27 +23,30 @@ import image14 from '@/images/events/apr-2023/phpstoke9.jpg'
 import event from "@/event";
 
 function Photos() {
+  const images = [image6, image10, image9, image7, image8, image11, image12, image13, image14]
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image6, image10, image9, image7, image8, image11, image12, image13, image14].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+    <div className="relative mt-16 sm:mt-20">
+      <div className="relative flex max-w-[100vw] overflow-hidden py-5">
+        <div className="flex gap-8 w-max animate-marquee [--duration:90s] hover:[animation-play-state:paused]">
+          {[...images, ...images].map((image, imageIndex) => (
+              <div
+                  key={image.src}
+                  className={clsx(
+                      'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl snap-center',
+                      rotations[imageIndex % rotations.length]
+                  )}
+              >
+                <Image
+                    src={image}
+                    alt=""
+                    sizes="(min-width: 640px) 18rem, 11rem"
+                    className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -51,8 +54,8 @@ function Photos() {
 
 export function Hero() {
   return (
-    <div className="relative pt-10 pb-20 sm:py-24">
-      <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
+      <div className="relative pt-10 pb-20 sm:py-24">
+        <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
         {/*<Image
           className="absolute top-0 left-0 translate-y-[-10%] translate-x-[-55%] -scale-x-100 sm:left-1/2 sm:translate-y-[-6%] sm:translate-x-[-98%] lg:translate-x-[-106%] xl:translate-x-[-122%]"
           src={backgroundImage}
