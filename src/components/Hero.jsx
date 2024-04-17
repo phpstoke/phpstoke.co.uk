@@ -85,7 +85,12 @@ export function Hero() {
             {[
               ['Members', event.members],
               ['Venue', event.location],
-              ['What3Words', '///melon.prices.soil'],
+              ['What3Words', (
+                  // eslint-disable-next-line react/jsx-key
+                  <a href="https://what3words.com/next.inform.served" className="underline hover:text-indigo-600" target="_blank" rel="noreferrer">
+                      ///next.inform.served
+                  </a>
+              )],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-indigo-600">{name}</dt>
