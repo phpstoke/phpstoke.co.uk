@@ -89,8 +89,8 @@ export function Hero() {
               ['Members', event.members],
               ['Venue', event.location],
               ['What3Words', (
-                  // eslint-disable-next-line react/jsx-key
-                  <a href="https://what3words.com/next.inform.served" className="underline hover:text-indigo-600" target="_blank" rel="noreferrer">
+                  // eslint-disable-next-line react/jsx-no-comment-textnodes
+                  <a href="https://what3words.com/next.inform.served" className="underline hover:text-indigo-600" target="_blank" rel="noreferrer" key="what3Words">
                       ///next.inform.served
                   </a>
               )],
