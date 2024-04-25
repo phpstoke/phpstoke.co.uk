@@ -12,7 +12,7 @@ import {previewlinks} from "@/lib/previewlinks";
 import event from "@/event";
 
 export async function getServerSideProps(context) {
-    const preview = await previewlinks.downloadImage({
+    const preview = await previewlinks.signedImageUrl({
         siteId: 764,
         templateId: 1013,
         fields: {
@@ -22,12 +22,12 @@ export async function getServerSideProps(context) {
             'previewlinks:repository': event.event,
             'previewlinks:image': 'https://phpstoke.co.uk/android-chrome-512x512.png',
         },
-    }).then((response) => response.data)
+    })
 
     return {
         props: {
+            preview,
             fullUrl: process.env.FULL_URL,
-            preview: preview.data.url,
         },
     }
 }
