@@ -32,7 +32,7 @@ function Photos() {
         <div className="flex gap-8 w-max animate-marquee [--duration:90s] hover:[animation-play-state:paused]">
           {[...images, ...images].map((image, imageIndex) => (
               <div
-                  key={image.src}
+                  key={`${image.src}-${imageIndex}`}
                   className={clsx(
                       'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl snap-center',
                       rotations[imageIndex % rotations.length]
