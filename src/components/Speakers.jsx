@@ -21,6 +21,7 @@ import harryMessenger from '@/images/avatars/harry-messenger.jpeg'
 import mattDavis from '@/images/avatars/matt-davis.jpg'
 import ryanChandler from '@/images/avatars/ryan-chandler.jpg'
 import grahamCampbell from '@/images/avatars/graham-campbell.jpg'
+import robWells from '@/images/avatars/rob-wells.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -34,8 +35,13 @@ const days = [
         available: true,
         lightning: false,
       }, {
-        available: true,
+        name: 'Rob Wells',
+        // role: '—',
+        talk: 'Creative coding on the web',
+        image: robWells,
+        twitterUrl: 'fragglebob',
         lightning: true,
+        available: false,
       }, {
         available: true,
         lightning: true,
@@ -279,10 +285,10 @@ function SpeakerAvailable({ id, speaker, speakerIndex, ...props }) {
                     speaker.lightning ? (
                       <div>
                         <BoltIcon className="text-yellow-400 w-6 h-6 inline-block mr-2 -mt-1" />
-                        15-minute lightning talk
+                        15 minute lightning talk
                       </div>
                     ) : (
-                      <span>30-minute talk</span>
+                      <span>30 minute talk</span>
                     )
                 }
               </h3>
@@ -333,18 +339,22 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
                 <h3 className="text-indigo-700 tracking-tight text-base">{speaker.talk}</h3>
               ) : null
             }
-            <p className="mt-1 text-sm tracking-tight text-slate-500 break-all">{speaker.role}</p>
+            {
+              speaker.role ? (
+                <p className="mt-1 text-sm tracking-tight text-slate-500 break-all">{speaker.role}</p>
+              ) : null
+            }
             <div className="text-indigo-900 text-sm">
               {
                 speaker.lightning ? (
                   <div>
                     <BoltIcon className="text-yellow-400 w-4 h-4 inline-block mr-2 -mt-1" />
-                    Lightning talk
+                    15 Minutes
                   </div>
                 ) : (
                   <div>
                     <AcademicCapIcon className="text-indigo-700 w-4 h-4 inline-block mr-2 -mt-1" />
-                    30 Minute Talk
+                    30 Minutes
                   </div>
                 )
               }
