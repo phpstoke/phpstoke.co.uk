@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.2",
+    "@headlessui/react": "^2.0.4",
     "@heroicons/react": "^2.0.14",
     "@previewlinks/node-previewlinks": "^0.1.0",
     "autoprefixer": "^10.4.12",
