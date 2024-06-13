@@ -22,6 +22,7 @@ import mattDavis from '@/images/avatars/matt-davis.jpg'
 import ryanChandler from '@/images/avatars/ryan-chandler.jpg'
 import grahamCampbell from '@/images/avatars/graham-campbell.jpg'
 import robWells from '@/images/avatars/rob-wells.jpg'
+import sunilKumar from '@/images/avatars/sunil-kumar.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -32,8 +33,13 @@ const days = [
     dateTime: '2024-07-18',
     speakers: [
       {
-        available: true,
+        name: 'Sunil Kumar',
+        // role: '—',
+        talk: 'Are you speaking my language?',
+        image: sunilKumar,
+        linkedinUrl: 'https://www.linkedin.com/in/sk-jaiswal/',
         lightning: false,
+        available: false,
       }, {
         name: 'Rob Wells',
         // role: '—',
