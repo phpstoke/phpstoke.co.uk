@@ -23,6 +23,7 @@ import ryanChandler from '@/images/avatars/ryan-chandler.jpg'
 import grahamCampbell from '@/images/avatars/graham-campbell.jpg'
 import robWells from '@/images/avatars/rob-wells.jpg'
 import sunilKumar from '@/images/avatars/sunil-kumar.jpg'
+import emmanuelOgbiyoyo from '@/images/avatars/emmanuel-ogbiyoyo.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -38,6 +39,14 @@ const days = [
         talk: 'Are you speaking my language?',
         image: sunilKumar,
         linkedinUrl: 'https://www.linkedin.com/in/sk-jaiswal/',
+        lightning: false,
+        available: false,
+      }, {
+        name: 'Emmanuel Ogbiyoyo',
+        // role: '—',
+        talk: 'The Grand Monolith: Insights into Modularity Principles and Practices',
+        image: emmanuelOgbiyoyo,
+        webUrl: 'https://app.expitra.com/?ref=phpstoke',
         lightning: false,
         available: false,
       }, {
