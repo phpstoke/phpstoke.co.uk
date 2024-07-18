@@ -19,6 +19,7 @@ const sponsors = [
 
 const pastSponsors = [
   { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
+  { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
   { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'Mollie', logo: logoMollie, link: 'https://mollie.com/?ref=phpstoke' },
   { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
@@ -54,7 +55,7 @@ export function Sponsors() {
           ))}
         </div>
         <div className="flex items-center justify-center rounded-2xl">
-          <a href="mailto:james@alt-three.com?subject=Sponsor PHP Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
+          <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
             <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
             <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
           </a>
@@ -79,7 +80,7 @@ export function PastSponsors() {
             Thank you to our past sponsors who made PHP Stoke possible.
           </p>
         </div>
-        <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 2 === 0 ? 2 : 3}`}>
+        <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 3 === 0 ? 3 : 2}`}>
           {pastSponsors.map((sponsor) => (
             <div
               key={sponsor.name}
@@ -92,7 +93,7 @@ export function PastSponsors() {
           ))}
 
           <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
-            <a href="mailto:james@alt-three.com?subject=Sponsor PHP Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
+            <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
               <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
               <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
             </a>
