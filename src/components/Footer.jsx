@@ -12,7 +12,7 @@ export function Footer() {
             rights reserved.
           </p>
           <p className="mt-6 text-base text-slate-500 md:mt-0 md:text-sm">
-            PHP Stoke is organised by <a href="https://pinkary.com/@jbrooksuk" className="hover:text-indigo-500 font-semibold">James Brooks</a>.
+            PHP Stoke is organised by <a href="https://pinkary.com/@jbrooksuk?ref=phpstoke" className="hover:text-indigo-500 font-semibold">James Brooks</a>.
           </p>
         </div>
       </Container>
