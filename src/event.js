@@ -5,7 +5,7 @@ const event = {
     event: 'Thursday, 17th October 2024 @ 6:15pm',
     meetupUrl: 'https://www.meetup.com/php-stoke/events/302306180/',
     location: 'The Smithfield Works, Stoke-on-Trent',
-    members: '119+',
+    members: '140+',
 }
 
 export default event
