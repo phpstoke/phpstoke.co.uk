@@ -8,7 +8,7 @@ import { Hosts } from '@/components/Hosts'
 import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
 import { PastSponsors, Sponsors } from '@/components/Sponsors'
-import {previewlinks} from "@/lib/previewlinks";
+import { previewlinks } from "@/lib/previewlinks";
 import event from "@/event";
 
 export async function getServerSideProps(context) {
