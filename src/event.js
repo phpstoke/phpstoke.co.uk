@@ -6,6 +6,7 @@ const event = {
     meetupUrl: 'https://www.meetup.com/php-stoke/events/302306180/',
     location: 'The Smithfield Works, Stoke-on-Trent',
     members: '140+',
+    date: '2024-10-17',
 }
 
 export default event
