@@ -24,6 +24,7 @@ import grahamCampbell from '@/images/avatars/graham-campbell.jpg'
 import robWells from '@/images/avatars/rob-wells.jpg'
 import sunilKumar from '@/images/avatars/sunil-kumar.jpg'
 import emmanuelOgbiyoyo from '@/images/avatars/emmanuel-ogbiyoyo.jpeg'
+import stuartOtter from '@/images/avatars/stuart-otter.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -34,18 +35,20 @@ const days = [
     dateTime: '2024-10-17',
     speakers: [
       {
+        name: 'Stuart Otter',
+        role: 'Head of Technical at Aware Digital',
+        talk: 'Imposter Syndrome: How to keep your head on',
+        image: stuartOtter,
+        linkedinUrl: 'https://www.linkedin.com/in/stuartotter/',
+        lightning: true,
+        available: false,
+      }, {
         available: true,
         lightning: false,
       }, {
         available: true,
         lightning: false,
-      }, {
-        available: true,
-        lightning: true,
-      }, {
-        available: true,
-        lightning: true,
-      }
+      },
     ],
   },
   {
