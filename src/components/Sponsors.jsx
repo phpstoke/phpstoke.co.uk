@@ -12,13 +12,12 @@ import jumpTwentyFour from '@/images/logos/jump24.svg'
 import laraDir from '@/images/logos/laradir.svg'
 
 const sponsors = [
-  { name: 'Laradir', logo: laraDir, link: 'https://laradir.com/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
 
 const pastSponsors = [
-  { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
+  { name: 'Laradir', logo: laraDir, link: 'https://laradir.com/?ref=phpstoke' },
   { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
   { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'Mollie', logo: logoMollie, link: 'https://mollie.com/?ref=phpstoke' },
