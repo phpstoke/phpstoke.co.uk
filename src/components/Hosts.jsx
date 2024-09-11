@@ -9,7 +9,7 @@ const people = [
   {
     name: 'James Brooks',
     image: jamesImage,
-    twitterUrl: 'https://twitter.com/jbrooksuk',
+    twitterUrl: 'https://x.com/jbrooksuk',
     website: 'https://pinkary.com/@jbrooksuk?ref=phpstoke',
     role: 'Engineering Team Lead at Laravel'
   },
