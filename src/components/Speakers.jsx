@@ -44,6 +44,14 @@ const days = [
         lightning: false,
         available: false,
       }, {
+        name: 'Dan Johnson',
+        role: 'Head of Engineering at Trybe',
+        talk: 'Encoding Explained',
+        image: null,
+        twitterUrl: 'danjohnsonxyz',
+        lightning: false,
+        available: false,
+      }, {
         name: 'Stuart Otter',
         role: 'Head of Technical at Aware Digital',
         talk: 'Imposter Syndrome: How to keep your head on',
@@ -51,9 +59,6 @@ const days = [
         linkedinUrl: 'https://www.linkedin.com/in/stuartotter/',
         lightning: true,
         available: false,
-      }, {
-        available: true,
-        lightning: false,
       }, {
         available: true,
         lightning: false,
