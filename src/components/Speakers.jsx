@@ -59,9 +59,6 @@ const days = [
         linkedinUrl: 'https://www.linkedin.com/in/stuartotter/',
         lightning: true,
         available: false,
-      }, {
-        available: true,
-        lightning: false,
       },
     ],
   },
