@@ -10,6 +10,7 @@ import logoPalletOnline from '@/images/logos/palletonline.svg'
 import logoMollie from '@/images/logos/mollie.svg'
 import jumpTwentyFour from '@/images/logos/jump24.svg'
 import laraDir from '@/images/logos/laradir.svg'
+import logoCachet from '@/images/logos/cachet.svg'
 
 const sponsors = [
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
@@ -24,6 +25,10 @@ const pastSponsors = [
   { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
   { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
   { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
+]
+
+const communitySponsors = [
+  { name: 'Cachet', logo: logoCachet, link: 'https://cachethq.io/?ref=phpstoke' },
 ]
 
 export function Sponsors() {
@@ -100,5 +105,44 @@ export function PastSponsors() {
         </div>
       </Container>
     </section>
+  )
+}
+
+export function CommunitySponsors() {
+  return (
+      <section id="community-sponsors" aria-label="Community Sponsors" className="py-12 sm:py-20">
+        <Container>
+          <div className="mx-auto lg:mx-0 text-center">
+            <h2
+                id="community-title"
+                className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-indigo-900 sm:text-5xl"
+            >
+              Community Sponsors
+            </h2>
+            <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
+              Community sponsors who support PHP Stoke.
+            </p>
+          </div>
+          <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 3 === 0 ? 3 : 2}`}>
+            {communitySponsors.map((sponsor) => (
+                <div
+                    key={sponsor.name}
+                    className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
+                >
+                  <div className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-4 py-8">
+                    <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200" unoptimized />
+                  </div>
+                </div>
+            ))}
+
+            <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
+              <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
+                <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
+                <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
+              </a>
+            </div>
+          </div>
+        </Container>
+      </section>
   )
 }

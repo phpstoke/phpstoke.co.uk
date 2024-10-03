@@ -7,7 +7,7 @@ import { Hero } from '@/components/Hero'
 import { Hosts } from '@/components/Hosts'
 import { Newsletter } from '@/components/Newsletter'
 import { Speakers } from '@/components/Speakers'
-import { PastSponsors, Sponsors } from '@/components/Sponsors'
+import {CommunitySponsors, PastSponsors, Sponsors} from '@/components/Sponsors'
 import { previewlinks } from "@/lib/previewlinks";
 import event from "@/event";
 
@@ -52,6 +52,7 @@ export default function Home({fullUrl}) {
         <Sponsors />
         <Speakers />
         <Hosts />
+        <CommunitySponsors />
         <PastSponsors />
         <Newsletter />
       </main>
