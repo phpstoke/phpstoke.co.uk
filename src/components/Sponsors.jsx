@@ -11,8 +11,10 @@ import logoMollie from '@/images/logos/mollie.svg'
 import jumpTwentyFour from '@/images/logos/jump24.svg'
 import laraDir from '@/images/logos/laradir.svg'
 import logoCachet from '@/images/logos/cachet.svg'
+import logoVoltageSoftware from '@/images/logos/voltagesoftware.svg'
 
 const sponsors = [
+  { name: 'Voltage Software', logo: logoVoltageSoftware, link: 'https://voltagesoftware.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
