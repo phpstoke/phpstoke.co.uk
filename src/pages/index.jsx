@@ -49,11 +49,10 @@ export default function Home({fullUrl}) {
       <Header />
       <main>
         <Hero />
-        <Sponsors />
         <Speakers />
-        <Hosts />
-        <CommunitySponsors />
+        <Sponsors />
         <PastSponsors />
+        <Hosts />
         <Newsletter />
       </main>
       <Footer />

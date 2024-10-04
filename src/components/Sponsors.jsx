@@ -16,6 +16,7 @@ import logoVoltageSoftware from '@/images/logos/voltagesoftware.svg'
 const sponsors = [
   { name: 'Voltage Software', logo: logoVoltageSoftware, link: 'https://voltagesoftware.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
+  { name: 'Cachet', logo: logoCachet, link: 'https://cachethq.io/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
 
@@ -29,42 +30,42 @@ const pastSponsors = [
   { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
 ]
 
-const communitySponsors = [
-  { name: 'Cachet', logo: logoCachet, link: 'https://cachethq.io/?ref=phpstoke' },
-]
-
 export function Sponsors() {
   return (
     <section id="sponsors" aria-label="Sponsors" className="pt-12 sm:pt-24">
       <Container>
-        <div className="mx-auto lg:mx-0 text-center">
-          <h2
-            id="speakers-title"
-            className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-indigo-900 sm:text-5xl"
-          >
-            Sponsors
-          </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Thank you to the sponsors who make our meet-up possible.
-          </p>
-        </div>
-        <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${sponsors.length}`}>
-          {sponsors.map((sponsor) => (
-            <div
-              key={sponsor.name}
-              className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
-            >
-              <a href={sponsor.link} className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
-                <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} unoptimized />
-              </a>
+        <div className="py-12 sm:py-32">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+              <div className="mx-auto w-full max-w-xl lg:mx-0">
+                <h2 className="font-display text-4xl font-medium tracking-tighter text-indigo-600 sm:text-5xl">Sponsors</h2>
+                <div className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
+                  <p>Thank you to the sponsors who continue to make our meet-up possible.</p>
+                </div>
+                <div className="mt-8 flex items-center gap-x-6">
+                  <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke"
+                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sponsor Us</a>
+                  <a href="mailto:sponsor@phpstoke.co.uk" className="text-sm font-semibold text-gray-900">Contact us <span
+                      aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+              <div
+                  className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-2 lg:mx-0 lg:max-w-none lg:pl-8">
+                {sponsors.map((sponsor) => (
+                  <div
+                      key={sponsor.name}
+                      className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
+                  >
+                    <a href={sponsor.link}
+                       key={sponsor.name}
+                       className="px-8 py-8">
+                      <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} unoptimized className="max-h-12 w-full object-contain object-left" width="104" height="48" />
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-center rounded-2xl">
-          <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
-            <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
-            <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
-          </a>
+          </div>
         </div>
       </Container>
     </section>
@@ -73,79 +74,34 @@ export function Sponsors() {
 
 export function PastSponsors() {
   return (
-    <section id="past-sponsors" aria-label="Past Sponsors" className="py-12 sm:py-20">
-      <Container>
-        <div className="mx-auto lg:mx-0 text-center">
-          <h2
-            id="speakers-title"
-            className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-indigo-900 sm:text-5xl"
-          >
-            Past Sponsors
-          </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Thank you to our past sponsors who made PHP Stoke possible.
-          </p>
-        </div>
-        <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 3 === 0 ? 3 : 2}`}>
-          {pastSponsors.map((sponsor) => (
-            <div
-              key={sponsor.name}
-              className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
-            >
-              <div className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-4 py-8">
-                <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200" unoptimized />
-              </div>
-            </div>
-          ))}
-
-          <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
-            <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
-              <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
-              <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
-            </a>
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
-}
-
-export function CommunitySponsors() {
-  return (
-      <section id="community-sponsors" aria-label="Community Sponsors" className="py-12 sm:py-20">
+      <section id="past-sponsors" aria-label="Past Sponsors" className="py-12 sm:py-20">
         <Container>
           <div className="mx-auto lg:mx-0 text-center">
             <h2
-                id="community-title"
+                id="speakers-title"
                 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-indigo-900 sm:text-5xl"
             >
-              Community Sponsors
+              Past Sponsors
             </h2>
             <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-              Community sponsors who support PHP Stoke.
+              Thank you to our past sponsors who made PHP Stoke possible.
             </p>
           </div>
-          <div className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 3 === 0 ? 3 : 2}`}>
-            {communitySponsors.map((sponsor) => (
+          <div
+              className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 1 === 0 ? 3 : 2}`}>
+            {pastSponsors.map((sponsor) => (
                 <div
                     key={sponsor.name}
                     className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
                 >
-                  <a href={sponsor.link}
-                     className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
+                  <div
+                      className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-4 py-8">
                     <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name}
                            className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200"
                            unoptimized/>
-                  </a>
+                  </div>
                 </div>
-              ))}
-
-            <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
-              <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
-                <h2 className="text-2xl font-medium font-display tracking-tighter">Interested in sponsoring?</h2>
-                <p className="font-display">Contact us about <span className="highlight">sponsoring</span> our next event.</p>
-              </a>
-            </div>
+            ))}
           </div>
         </Container>
       </section>
