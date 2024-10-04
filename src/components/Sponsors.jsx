@@ -129,11 +129,14 @@ export function CommunitySponsors() {
                     key={sponsor.name}
                     className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
                 >
-                  <div className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-4 py-8">
-                    <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200" unoptimized />
-                  </div>
+                  <a href={sponsor.link}
+                     className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
+                    <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name}
+                           className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200"
+                           unoptimized/>
+                  </a>
                 </div>
-            ))}
+              ))}
 
             <div className="flex items-center justify-center rounded-2xl hover:bg-gray-50">
               <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke" className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-8 py-16">
