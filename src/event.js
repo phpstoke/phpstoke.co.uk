@@ -2,11 +2,11 @@ const event = {
     title: 'PHP Stoke',
     subtitle: 'The Stoke-on-Trent PHP Meet-Up',
     description: 'PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.',
-    event: 'Thursday, 17th October 2024 @ 6:15pm',
-    meetupUrl: 'https://www.meetup.com/php-stoke/events/302306180/',
+    event: 'Thursday, 16th January 2025 @ 6:15pm',
+    meetupUrl: 'https://www.meetup.com/php-stoke/events/304159089/',
     location: 'The Smithfield Works, Stoke-on-Trent',
-    members: '140+',
-    date: '2024-10-17',
+    members: '160+',
+    date: '2025-01-16',
 }
 
 export default event
