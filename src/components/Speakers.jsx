@@ -36,8 +36,11 @@ const days = [
     dateTime: '2025-01-16',
     speakers: [
       {
+        name: 'David Hill',
+        role: 'Head of Design at Laravel',
+        twitterUrl: 'iamdavidhill',
         lightning: false,
-        available: true,
+        available: false,
       }, {
         lightning: false,
         available: true,
