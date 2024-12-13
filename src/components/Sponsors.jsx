@@ -14,6 +14,7 @@ import logoCachet from '@/images/logos/cachet.svg'
 import logoVoltageSoftware from '@/images/logos/voltagesoftware.svg'
 
 const sponsors = [
+  { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'Cachet', logo: logoCachet, link: 'https://cachethq.io/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
@@ -22,7 +23,6 @@ const sponsors = [
 const pastSponsors = [
   { name: 'Voltage Software', logo: logoVoltageSoftware, link: 'https://voltagesoftware.co.uk/?ref=phpstoke' },
   { name: 'Laradir', logo: laraDir, link: 'https://laradir.com/?ref=phpstoke' },
-  { name: 'Jump24', logo: jumpTwentyFour, link: 'https://jump24.co.uk/?ref=phpstoke' },
   { name: 'Pallet Online', logo: logoPalletOnline, link: 'https://palletonline.co.uk/?ref=phpstoke' },
   { name: 'Mollie', logo: logoMollie, link: 'https://mollie.com/?ref=phpstoke' },
   { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
