@@ -10,7 +10,7 @@ export function News() {
         <div className="mx-auto flex flex-auto basis-full overflow-x-auto whitespace-nowrap py-4 text-sm sm:text-xs text-amber-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:py-0">
           <div className="mx-auto flex items-center gap-2 px-4 overflow-hidden sm:gap-4">
             <p>
-              Use code <span className="font-semibold font-mono">PHPCOMMUNITY</span> for 10% off <a href="https://www.phpconference.co.uk/" className="font-semibold underline">PHP UK Conference tickets</a>.
+              Use code <span className="font-semibold font-mono">PHPCOMMUNITY</span> for a community discount off <a href="https://www.phpconference.co.uk/" className="font-semibold underline">PHP UK Conference tickets</a>.
             </p>
           </div>
         </div>
