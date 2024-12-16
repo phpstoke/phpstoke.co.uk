@@ -26,6 +26,7 @@ import sunilKumar from '@/images/avatars/sunil-kumar.jpg'
 import emmanuelOgbiyoyo from '@/images/avatars/emmanuel-ogbiyoyo.jpeg'
 import stuartOtter from '@/images/avatars/stuart-otter.jpeg'
 import jamiePeters from '@/images/avatars/jamie-peters.jpg'
+import danNewns from '@/images/avatars/dan-newns.jpg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -43,8 +44,14 @@ const days = [
         lightning: false,
         available: false,
       }, {
-        lightning: false,
-        available: true,
+        name: 'Dan Newns',
+        role: 'Co-Founder at Jump24',
+        talk: 'Coding standards as easy as E.C.S',
+        image: danNewns,
+        twitterUrl: 'danielnewns',
+        linkedInUrl: 'https://www.linkedin.com/in/daniel-newns/',
+        lightning: true,
+        available: false,
       }, {
         lightning: true,
         available: true,
@@ -77,7 +84,7 @@ const days = [
         role: 'Head of Technical at Aware Digital',
         talk: 'Imposter Syndrome: How to keep your head on',
         image: stuartOtter,
-        linkedinUrl: 'https://www.linkedin.com/in/stuartotter/',
+        linkedInUrl: 'https://www.linkedin.com/in/stuartotter/',
         lightning: true,
         available: false,
       },
@@ -93,7 +100,7 @@ const days = [
         // role: '—',
         talk: 'Are you speaking my language?',
         image: sunilKumar,
-        linkedinUrl: 'https://www.linkedin.com/in/sk-jaiswal/',
+        linkedInUrl: 'https://www.linkedin.com/in/sk-jaiswal/',
         lightning: false,
         available: false,
       }, {
