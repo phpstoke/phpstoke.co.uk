@@ -38,6 +38,7 @@ const days = [
       {
         name: 'David Hill',
         role: 'Head of Design at Laravel',
+        talk: 'Designing Laravel',
         twitterUrl: 'iamdavidhill',
         lightning: false,
         available: false,
