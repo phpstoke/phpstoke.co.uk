@@ -38,18 +38,18 @@ const days = [
     dateTime: '2025-05-08',
     speakers: [
       {
-        lightning: false,
-        available: true,
-      }, {
-        lightning: false,
-        available: true,
-      }, {
         name: 'Ollie Reardon',
         role: 'Lead Developer @ DeterTech',
         talk: 'Teams that scale: Personal notes on how to onboard team members',
         image: ollieReardon,
-        lightning: true,
+        lightning: false,
         available: false,
+      }, {
+        lightning: false,
+        available: true,
+      }, {
+        lightning: true,
+        available: true,
       },
     ],
   },
