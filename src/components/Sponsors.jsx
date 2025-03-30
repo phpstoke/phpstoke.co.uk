@@ -12,11 +12,13 @@ import jumpTwentyFour from '@/images/logos/jump24.svg'
 import laraDir from '@/images/logos/laradir.svg'
 import logoCachet from '@/images/logos/cachet.svg'
 import logoVoltageSoftware from '@/images/logos/voltagesoftware.svg'
+import logoFabric from '@/images/logos/fabric.svg'
 
 const sponsors = [
   { name: 'The Smithfield Works', logo: logoSmithfieldWorks, link: 'https://smithfield-works.com/?ref=phpstoke' },
   { name: 'Cachet', logo: logoCachet, link: 'https://cachethq.io/?ref=phpstoke' },
   { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
+  { name: 'Fabric', logo: logoFabric, link: 'https://madebyfabric.uk/?ref=phpstoke' },
 ]
 
 const pastSponsors = [
@@ -28,6 +30,7 @@ const pastSponsors = [
   { name: 'Dotdigital', logo: logoDotdigital, link: 'https://dotdigital.com/?ref=phpstoke' },
   { name: 'JetBrains', logo: logoJetBrains, link: 'https://jetbrains.com/?ref=phpstoke' },
   { name: 'Klarna', logo: logoKlarna, link: 'https://klarna.com/uk/?ref=phpstoke' },
+  { name: 'SendStack', logo: logoSendStack, link: 'https://getsendstack.com/?ref=phpstoke' },
 ]
 
 export function Sponsors() {
