@@ -27,23 +27,18 @@ import emmanuelOgbiyoyo from '@/images/avatars/emmanuel-ogbiyoyo.jpeg'
 import stuartOtter from '@/images/avatars/stuart-otter.jpeg'
 import jamiePeters from '@/images/avatars/jamie-peters.jpg'
 import danNewns from '@/images/avatars/dan-newns.jpg'
-import ollieReardon from '@/images/avatars/ollie-reardon.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
 const days = [
   {
     name: 'PHP Stoke #9',
-    date: 'May 8th, 2025',
-    dateTime: '2025-05-08',
+    date: 'Feb 26th, 2026',
+    dateTime: '2026-02-26',
     speakers: [
       {
-        name: 'Ollie Reardon',
-        role: 'Lead Developer @ DeterTech',
-        talk: 'Teams that scale: Personal notes on how to onboard team members',
-        image: ollieReardon,
         lightning: false,
-        available: false,
+        available: true,
       }, {
         lightning: false,
         available: true,

@@ -10,8 +10,8 @@ const people = [
     name: 'James Brooks',
     image: jamesImage,
     twitterUrl: 'https://x.com/jbrooksuk',
-    website: 'https://pinkary.com/@jbrooksuk?ref=phpstoke',
-    role: 'Engineering Team Lead at Laravel'
+    website: 'https://james.brooks.page?ref=phpstoke',
+    role: 'Head of Enterprise Enablement, Laravel'
   },
 ]
 
@@ -34,10 +34,10 @@ export function Hosts() {
           <div className="space-y-12">
             <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
               <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-                PHP Stoke is organised by <a className="highlight underline" href="https://pinkary.com/@jbrooksuk/?ref=phpstoke">James Brooks</a>.
+                PHP Stoke is organised by <a className="highlight underline" href="https://x.com/jbrooksuk">James Brooks</a>.
               </p>
             </div>
-            <ul role="list" className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0  lg:gap-8">
+            <ul role="list" className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
               {people.map((person) => (
                 <li key={person.name} className="rounded-xl md:rounded-5xl bg-indigo-50 py-10 px-6 text-center xl:px-10 xl:text-left col-start-1 col-span-3 lg:col-start-2 lg:col-span-1">
                   <div className="space-y-6 xl:space-y-10">
