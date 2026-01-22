@@ -35,38 +35,55 @@ const pastSponsors = [
 
 export function Sponsors() {
   return (
-    <section id="sponsors" aria-label="Sponsors" className="pt-12 sm:pt-24">
+    <section id="sponsors" aria-label="Sponsors">
       <Container>
-        <div className="py-12 sm:py-32">
+        <div className="py-12 sm:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-              <div className="mx-auto w-full max-w-xl lg:mx-0">
-                <h2 className="font-display text-4xl font-medium tracking-tighter text-indigo-600 sm:text-5xl">Sponsors</h2>
-                <div className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-                  <p>Thank you to the sponsors who continue to make our meet-up possible.</p>
+            {/* Bento grid layout */}
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+              {/* Left column - Text content */}
+              <div className="bento-card flex flex-col justify-between lg:row-span-2 !p-8 sm:!p-10">
+                <div>
+                  <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                    Sponsors
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                    These brilliant sponsors keep the pizza flowing and the venue booked. Fancy joining them?
+                  </p>
                 </div>
-                <div className="mt-8 flex items-center gap-x-6">
-                  <a href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke"
-                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sponsor Us</a>
-                  <a href="mailto:sponsor@phpstoke.co.uk" className="text-sm font-semibold text-gray-900">Contact us <span
-                      aria-hidden="true">&rarr;</span></a>
-                </div>
-              </div>
-              <div
-                  className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-2 lg:mx-0 lg:max-w-none lg:pl-8">
-                {sponsors.map((sponsor) => (
-                  <div
-                      key={sponsor.name}
-                      className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <a
+                    href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke"
+                    className="inline-flex justify-center items-center rounded-2xl bg-primary-600 px-5 py-3 text-base font-semibold text-white shadow-warm transition-all hover:bg-primary-500 hover:shadow-warm-lg hover:-translate-y-0.5 dark:bg-primary-500 dark:hover:bg-primary-400"
                   >
-                    <a href={sponsor.link}
-                       key={sponsor.name}
-                       className="px-8 py-8">
-                      <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name} unoptimized className="max-h-12 w-full object-contain object-left" width="104" height="48" />
-                    </a>
-                  </div>
-                ))}
+                    Sponsor Us
+                  </a>
+                  <a
+                    href="mailto:sponsor@phpstoke.co.uk"
+                    className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    Contact us
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
               </div>
+
+              {/* Right column - Sponsor logos in bento cards */}
+              {sponsors.map((sponsor) => (
+                <a
+                  key={sponsor.name}
+                  href={sponsor.link}
+                  className="bento-card group flex items-center justify-center !p-6 sm:!p-8"
+                >
+                  <Image
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    title={sponsor.name}
+                    unoptimized
+                    className="max-h-10 w-auto object-contain opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:scale-105 dark:brightness-0 dark:invert dark:opacity-60 dark:group-hover:opacity-100 sm:max-h-12"
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -77,36 +94,38 @@ export function Sponsors() {
 
 export function PastSponsors() {
   return (
-      <section id="past-sponsors" aria-label="Past Sponsors" className="py-12 sm:py-20">
-        <Container>
-          <div className="mx-auto lg:mx-0 text-center">
-            <h2
-                id="speakers-title"
-                className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-indigo-900 sm:text-5xl"
+    <section id="past-sponsors" aria-label="Past Sponsors" className="py-16 sm:py-24 bg-gray-50 dark:bg-surface-800/50">
+      <Container>
+        <div className="mx-auto text-center">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            Past Sponsors
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            Thank you to our past sponsors who made PHP Stoke possible.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 flex max-w-5xl flex-wrap items-center justify-center gap-x-12 gap-y-8">
+          {pastSponsors.map((sponsor) => (
+            <a
+              key={sponsor.name}
+              href={sponsor.link}
+              className="group flex h-12 items-center justify-center"
             >
-              Past Sponsors
-            </h2>
-            <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-              Thank you to our past sponsors who made PHP Stoke possible.
-            </p>
-          </div>
-          <div
-              className={`mx-auto mt-10 grid max-w-max grid-cols-1 place-content-center gap-y-2 gap-x-32 md:gap-x-8 lg:gap-x-32 sm:grid-cols-${pastSponsors.length % 1 === 0 ? 3 : 2}`}>
-            {pastSponsors.map((sponsor) => (
-                <div
-                    key={sponsor.name}
-                    className="flex items-center justify-center rounded-2xl hover:bg-gray-50"
-                >
-                  <div
-                      className="flex flex-col items-center grow h-full justify-center text-indigo-900 hover:text-indigo-600 px-4 py-8">
-                    <Image src={sponsor.logo} alt={sponsor.name} title={sponsor.name}
-                           className="grayscale hover:grayscale-0 opacity-60 transition-all ease-in-out duration-200"
-                           unoptimized/>
-                  </div>
-                </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+              <Image
+                src={sponsor.logo}
+                alt={sponsor.name}
+                title={sponsor.name}
+                className="h-6 w-auto object-contain opacity-40 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-50 dark:hover:opacity-100 sm:h-8"
+                unoptimized
+              />
+            </a>
+          ))}
+        </div>
+      </Container>
+    </section>
   )
+}
+
+export function CommunitySponsors() {
+  return null
 }

@@ -6,6 +6,8 @@ import * as Fathom from 'fathom-client'
 import 'focus-visible'
 import '@/styles/tailwind.css'
 
+import event from '@/event'
+
 function usePrevious(value) {
   let ref = useRef()
 
@@ -21,10 +23,6 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     // Initialize Fathom when the app loads
-    // Example: yourdomain.com
-    //  - Do not include https://
-    //  - This must be an exact match of your domain.
-    //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('ZVDKXCHJ', {
       includedDomains: ['phpstoke.co.uk'],
     })
@@ -47,19 +45,19 @@ export default function App({ Component, pageProps, router }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="PHP Stoke" />
+        <meta property="og:title" content={event.metaTitle} />
         <meta property="og:url" key="ogUrl" />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:image" content={pageProps.preview} />
-        <meta property="og:description" content="PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
+        <meta property="og:description" content={event.metaDescription} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@phpstoke" />
         <meta name="twitter:creator" content="@phpstoke" />
         <meta name="twitter:url" key="twitterUrl" />
-        <meta name="twitter:title" content="PHP Stoke" />
+        <meta name="twitter:title" content={event.metaTitle} />
         <meta name="twitter:image" content={pageProps.preview} />
-        <meta name="twitter:description" content="PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink." />
+        <meta name="twitter:description" content={event.metaDescription} />
       </Head>
 
       <Component previousPathname={previousPathname} {...pageProps} />

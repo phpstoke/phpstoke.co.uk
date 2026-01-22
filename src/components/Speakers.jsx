@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
+import event from '@/event'
 import oliverDaviesImage from '@/images/avatars/oliver-davies.jpg'
 import lukeBrowneImage from '@/images/avatars/luke-browne.jpg'
 import christopherMillerImage from '@/images/avatars/christopher-miller.jpg'
@@ -367,27 +368,27 @@ function SpeakerAvailable({ id, speaker, speakerIndex, ...props }) {
               className={clsx(
                   'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
                   [
-                    'border-indigo-300',
-                    'border-indigo-400',
-                    'border-sky-300',
+                    'border-primary-300 dark:border-primary-700',
+                    'border-primary-400 dark:border-primary-600',
+                    'border-primary-300 dark:border-primary-700',
                   ][speakerIndex % 3]
               )}
           />
           <div
-              className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
+              className="absolute inset-0 bg-primary-50 dark:bg-surface-800 grayscale hover:grayscale-0 transition duration-300"
               style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
           >
-            <UserIcon className="text-indigo-400 transition duration-300 group-hover:scale-90" />
+            <UserIcon className="text-primary-400 dark:text-primary-600 transition duration-300 group-hover:scale-90" />
           </div>
         </div>
         <div className="space-y-2 space-x-4 xl:flex xl:items-center xl:justify-between mt-8">
           <div className="space-y-1 text-lg font-medium leading-6">
             <div>
-              <h3 className="text-indigo-900">
+              <h3 className="text-gray-900 dark:text-white">
                 {
                     speaker.lightning ? (
                       <div>
-                        <BoltIcon className="text-yellow-400 w-6 h-6 inline-block mr-2 -mt-1" />
+                        <BoltIcon className="text-accent-400 w-6 h-6 inline-block mr-2 -mt-1" />
                         15 minute lightning talk
                       </div>
                     ) : (
@@ -395,8 +396,8 @@ function SpeakerAvailable({ id, speaker, speakerIndex, ...props }) {
                     )
                 }
               </h3>
-              <p className="mt-1 text-base tracking-tight text-slate-500">
-                Interested? <a className="underline hover:text-indigo-600" href="https://forms.gle/ZjZHE4qzmJR7FnZE8">Submit your { speaker.lightning && 'lightning' } talk</a>.
+              <p className="mt-1 text-base tracking-tight text-gray-500 dark:text-gray-400">
+                Interested? <a className="underline hover:text-primary-600 dark:hover:text-primary-400" href="https://forms.gle/ZjZHE4qzmJR7FnZE8">Submit your { speaker.lightning && 'lightning' } talk</a>.
               </p>
             </div>
           </div>
@@ -413,14 +414,14 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
               className={clsx(
                   'absolute top-0 left-0 right-4 bottom-6 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
                   [
-                    'border-indigo-300',
-                    'border-indigo-400',
-                    'border-sky-300',
+                    'border-primary-300 dark:border-primary-700',
+                    'border-primary-400 dark:border-primary-600',
+                    'border-primary-300 dark:border-primary-700',
                   ][speakerIndex % 3]
               )}
           />
           <div
-              className="absolute inset-0 bg-indigo-50 grayscale hover:grayscale-0 transition duration-300"
+              className="absolute inset-0 bg-primary-50 dark:bg-surface-800 grayscale hover:grayscale-0 transition duration-300"
               style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
           >
             <Image
@@ -436,27 +437,27 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
         </div>
         <div className="space-y-2 space-x-4 flex xl:items-center xl:justify-between mt-8 flex-row">
           <div className="space-y-1 text-lg font-medium leading-6 grow">
-            <h2 className="text-indigo-900">{speaker.name}</h2>
+            <h2 className="text-gray-900 dark:text-white">{speaker.name}</h2>
             {
               speaker.talk ? (
-                <h3 className="text-indigo-700 tracking-tight text-base">{speaker.talk}</h3>
+                <h3 className="text-primary-600 dark:text-primary-400 tracking-tight text-base">{speaker.talk}</h3>
               ) : null
             }
             {
               speaker.role ? (
-                <p className="mt-1 text-sm tracking-tight text-slate-500 break-all">{speaker.role}</p>
+                <p className="mt-1 text-sm tracking-tight text-gray-500 dark:text-gray-400 break-all">{speaker.role}</p>
               ) : null
             }
-            <div className="text-indigo-900 text-sm">
+            <div className="text-gray-900 dark:text-white text-sm">
               {
                 speaker.lightning ? (
                   <div>
-                    <BoltIcon className="text-yellow-400 w-4 h-4 inline-block mr-2 -mt-1" />
+                    <BoltIcon className="text-accent-400 w-4 h-4 inline-block mr-2 -mt-1" />
                     15 Minutes
                   </div>
                 ) : (
                   <div>
-                    <AcademicCapIcon className="text-indigo-700 w-4 h-4 inline-block mr-2 -mt-1" />
+                    <AcademicCapIcon className="text-primary-600 dark:text-primary-400 w-4 h-4 inline-block mr-2 -mt-1" />
                     30 Minutes
                   </div>
                 )
@@ -467,8 +468,8 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
             {
               speaker.twitterUrl &&
               <li>
-                <a href={`https://x.com/${speaker.twitterUrl}`} className="text-gray-400 hover:text-gray-300">
-                  <span className="sr-only">𝕏 (Ex. Twitter)</span>
+                <a href={`https://x.com/${speaker.twitterUrl}`} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                  <span className="sr-only">X (formerly Twitter)</span>
                   <svg className="size-5" aria-hidden="true" fill="currentColor" viewBox="0 0 300 300">
                     <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
                   </svg>
@@ -478,7 +479,7 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
             {
               speaker.webUrl &&
               <li>
-                <a href={speaker.webUrl} className="text-gray-400 hover:text-gray-300">
+                <a href={speaker.webUrl} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
                   <span className="sr-only">Website</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
@@ -489,7 +490,7 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
             {
                 speaker.linkedInUrl &&
                 <li>
-                  <a href={speaker.linkedInUrl} className="text-gray-400 hover:text-gray-300">
+                  <a href={speaker.linkedInUrl} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
                     <span className="sr-only">LinkedIn</span>
                     <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                       <path
@@ -503,6 +504,12 @@ function SpeakerProfile({id, speaker, speakerIndex, ...props}) {
       </div>
 )
 }
+
+// Calculate stats from the days data
+const totalEvents = days.length
+const totalTalks = days.reduce((count, day) => {
+  return count + day.speakers.filter(speaker => !speaker.available).length
+}, 0)
 
 export function Speakers() {
   let id = useId()
@@ -534,12 +541,13 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-indigo-600 sm:text-5xl"
+            className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
           >
             Speakers
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-indigo-900">
-            Thank you to all our speakers, past and present. Fancy speaking? <a href="https://forms.gle/ZjZHE4qzmJR7FnZE8" target="_blank" className="underline hover:text-indigo-600 highlight" rel="noreferrer">Submit your talk</a>.
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            {totalTalks} talks across {totalEvents} events. Fancy speaking?{' '}
+            <a href="https://forms.gle/ZjZHE4qzmJR7FnZE8" target="_blank" className="font-semibold text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 highlight" rel="noreferrer">Submit your talk</a>.
           </p>
         </div>
         <Tab.Group
@@ -548,7 +556,7 @@ export function Speakers() {
           vertical={tabOrientation === 'vertical'}
         >
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
-            <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-indigo-200 lg:block" />
+            <div className="absolute bottom-0 top-2 left-0.5 hidden w-px bg-primary-200 dark:bg-primary-800 lg:block" />
             <Tab.List className="grid auto-cols-auto grid-flow-dense justify-start gap-x-8 md:gap-x-0 gap-y-10 whitespace-nowrap grid-cols-2 px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) =>
                 days.map((day, dayIndex) => (
@@ -557,8 +565,8 @@ export function Speakers() {
                       className={clsx(
                         'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
                         dayIndex === selectedIndex
-                          ? 'fill-indigo-600 stroke-indigo-600'
-                          : 'fill-transparent stroke-slate-400'
+                          ? 'fill-primary-600 stroke-primary-600 dark:fill-primary-400 dark:stroke-primary-400'
+                          : 'fill-transparent stroke-gray-400 dark:stroke-gray-600'
                       )}
                     />
                     <div className="relative">
@@ -566,8 +574,8 @@ export function Speakers() {
                         className={clsx(
                           'font-mono text-sm',
                           dayIndex === selectedIndex
-                            ? 'text-indigo-600'
-                            : 'text-slate-500'
+                            ? 'text-primary-600 dark:text-primary-400'
+                            : 'text-gray-500 dark:text-gray-400'
                         )}
                       >
                         <Tab className="[&:not(:focus-visible)]:focus:outline-none">
@@ -577,7 +585,7 @@ export function Speakers() {
                       </div>
                       <time
                         dateTime={day.dateTime}
-                        className="mt-1.5 block text-2xl font-semibold tracking-tight text-indigo-900"
+                        className="mt-1.5 block text-2xl font-semibold tracking-tight text-gray-900 dark:text-white"
                       >
                         {day.date}
                       </time>
