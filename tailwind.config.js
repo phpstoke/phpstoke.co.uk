@@ -85,6 +85,10 @@ module.exports = {
         'shimmer': 'shimmer 3s ease-in-out infinite',
         'radar': 'radar 2s ease-out infinite',
         'rocket': 'rocket 2s ease-in-out infinite',
+        // 2026 animations
+        'float-subtle': 'floatSubtle 6s ease-in-out infinite',
+        'glow-breathe': 'glowBreathe 4s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 8s ease infinite',
       },
       keyframes: {
         marquee: {
@@ -138,6 +142,19 @@ module.exports = {
         rocket: {
           '0%, 100%': { transform: 'translate(0, 0) rotate(-45deg)' },
           '50%': { transform: 'translate(3px, -3px) rotate(-45deg)' },
+        },
+        // 2026 keyframes
+        floatSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        glowBreathe: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(139, 92, 246, 0.2), 0 0 40px rgba(139, 92, 246, 0.1)' },
+          '50%': { boxShadow: '0 0 30px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.15)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
       transitionDuration: {

@@ -17,9 +17,11 @@ export function Hosts() {
         <div className="mx-auto max-w-4xl">
           <h2
             id="hosts-title"
-            className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+            className="font-display text-3xl font-bold tracking-tight sm:text-4xl"
           >
-            Organised by
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300">
+              Organised by
+            </span>
           </h2>
 
           {/* Manifesto section */}

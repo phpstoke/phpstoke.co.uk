@@ -266,14 +266,16 @@ export function Hero() {
       <Container className="relative">
         {/* Constrained text content */}
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
-          {/* Tagline */}
+          {/* Tagline with subtle glow in dark mode */}
           <p className="animate-fade-in font-mono text-sm font-medium tracking-wide text-primary-600 dark:text-primary-400">
             {event.tagline}
           </p>
 
-          {/* Main headline */}
-          <h1 className="animate-fade-in-up animation-delay-100 mt-4 font-display text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl">
-            {event.title}
+          {/* Main headline with gradient text */}
+          <h1 className="animate-fade-in-up animation-delay-100 mt-4 font-display text-5xl font-bold tracking-tight sm:text-7xl">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary-800 to-gray-900 dark:from-white dark:via-primary-200 dark:to-white">
+              {event.title}
+            </span>
           </h1>
 
           {/* Description */}
@@ -298,7 +300,7 @@ export function Hero() {
         </div>
 
         {/* Social links */}
-        <div className="mx-auto max-w-2xl lg:max-w-4xl">
+        <div className="mx-auto max-w-2xl lg:max-w-7xl flex justify-center">
           <div className="animate-fade-in-up animation-delay-500 mt-6 flex items-center gap-6">
             <a 
               href="https://x.com/phpstoke" 

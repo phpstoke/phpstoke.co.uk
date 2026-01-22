@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import logoDotdigital from '@/images/logos/dotdigital.svg'
 import logoJetBrains from '@/images/logos/jetbrains.svg'
@@ -52,12 +53,9 @@ export function Sponsors() {
                   </p>
                 </div>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <a
-                    href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke"
-                    className="inline-flex justify-center items-center rounded-2xl bg-primary-600 px-5 py-3 text-base font-semibold text-white shadow-warm transition-all hover:bg-primary-500 hover:shadow-warm-lg hover:-translate-y-0.5 dark:bg-primary-500 dark:hover:bg-primary-400"
-                  >
+                  <Button href="mailto:sponsor@phpstoke.co.uk?subject=Sponsor%20PHP%20Stoke">
                     Sponsor Us
-                  </a>
+                  </Button>
                   <a
                     href="mailto:sponsor@phpstoke.co.uk"
                     className="inline-flex items-center justify-center gap-1 text-sm font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
@@ -115,7 +113,7 @@ export function PastSponsors() {
                 src={sponsor.logo}
                 alt={sponsor.name}
                 title={sponsor.name}
-                className="h-6 w-auto object-contain opacity-40 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-50 dark:hover:opacity-100 sm:h-8"
+                className="h-6 w-auto object-contain opacity-40 grayscale transition-all duration-300 hover:opacity-80 hover:scale-105 dark:invert dark:opacity-50 dark:hover:opacity-90 sm:h-8"
                 unoptimized
               />
             </a>

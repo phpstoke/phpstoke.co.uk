@@ -18,9 +18,11 @@ export function SpeakingCTA() {
           <div className="text-center">
             <h2
               id="speak-title"
-              className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+              className="font-display text-3xl font-bold tracking-tight sm:text-4xl"
             >
-              Thinking about speaking?
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300">
+                Thinking about speaking?
+              </span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
               PHP Stoke is the perfect place to give your first talk. A supportive audience, 
@@ -33,10 +35,10 @@ export function SpeakingCTA() {
             {event.speakingTips.map((tip, index) => (
               <div
                 key={tip.title}
-                className="relative rounded-2xl bg-white/80 p-6 shadow-sm ring-1 ring-gray-900/5 backdrop-blur dark:bg-surface-800/80 dark:ring-white/10"
+                className="group relative rounded-2xl bg-white/80 p-6 shadow-sm ring-1 ring-gray-900/5 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-surface-800/80 dark:ring-white/10 dark:hover:ring-primary-500/20"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 font-display text-sm font-bold text-primary-600 dark:bg-primary-900/50 dark:text-primary-400">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 font-display text-sm font-bold text-white shadow-sm transition-transform duration-300 group-hover:scale-110 dark:from-primary-400 dark:to-primary-500">
                     {index + 1}
                   </div>
                   <div>

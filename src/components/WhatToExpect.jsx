@@ -37,9 +37,11 @@ export function WhatToExpect() {
           <div className="max-w-2xl">
             <h2
               id="what-to-expect-title"
-              className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+              className="font-display text-3xl font-bold tracking-tight sm:text-4xl"
             >
-              What to expect
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300">
+                What to expect
+              </span>
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
               Every meetup is a chance to learn something new, meet great people, and leave feeling inspired.
@@ -57,7 +59,7 @@ export function WhatToExpect() {
                     animationDelay: `${index * 100}ms`,
                   }}
                 >
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-600 dark:bg-primary-900/50 dark:text-primary-400">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-100 to-primary-50 text-primary-600 shadow-sm transition-transform duration-300 group-hover:scale-110 dark:from-primary-900/50 dark:to-primary-800/30 dark:text-primary-400">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-display text-lg font-semibold text-gray-900 dark:text-white">

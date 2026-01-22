@@ -43,9 +43,11 @@ export function Header() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400"
+                    className="group relative text-sm font-medium text-gray-600 transition-colors hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400"
                   >
                     {link.label}
+                    {/* Animated underline */}
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-full" />
                   </a>
                 </li>
               ))}
