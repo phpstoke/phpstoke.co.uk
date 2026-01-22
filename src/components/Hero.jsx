@@ -53,36 +53,67 @@ function MembersCard({ delay = 0 }) {
       className="bento-card relative flex flex-col justify-end min-h-[180px] overflow-hidden opacity-0 animate-fade-in-up"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
-      {/* Animated people icons in a grid */}
-      <div className="absolute right-2 top-2 grid grid-cols-4 gap-1.5">
-        {[...Array(12)].map((_, i) => (
-          <svg
-            key={i}
-            className="h-5 w-5 text-primary-400/60 dark:text-primary-500/50"
-            style={{
-              animation: 'slide-up 2s ease-in-out infinite',
-              animationDelay: `${i * 0.1}s`,
-            }}
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
-          </svg>
-        ))}
+      {/* Large animated background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated block fills - larger and lighter */}
+        <div 
+          className="absolute -right-8 -top-8 h-40 w-40 rounded-3xl bg-gradient-to-br from-primary-200/30 to-primary-300/15 dark:from-primary-800/18 dark:to-primary-700/10"
+          style={{ animation: 'float 6s ease-in-out infinite' }}
+        />
+        <div 
+          className="absolute right-20 top-0 h-24 w-24 rounded-2xl bg-gradient-to-br from-primary-300/25 to-primary-400/12 dark:from-primary-700/15 dark:to-primary-600/8"
+          style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}
+        />
+        <div 
+          className="absolute right-4 top-20 h-16 w-16 rounded-xl bg-gradient-to-br from-primary-400/20 to-primary-500/10 dark:from-primary-600/12 dark:to-primary-500/6"
+          style={{ animation: 'float 4s ease-in-out infinite', animationDelay: '2s' }}
+        />
+        <div 
+          className="absolute right-28 top-16 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-300/18 to-primary-400/8 dark:from-primary-700/10 dark:to-primary-600/5"
+          style={{ animation: 'float 4.5s ease-in-out infinite', animationDelay: '0.5s' }}
+        />
+        
+        {/* Animated people icons spread wider */}
+        <div className="absolute right-1 top-1 grid grid-cols-5 gap-2.5 p-2">
+          {[...Array(10)].map((_, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-center"
+              style={{
+                animation: 'slide-up 2.5s ease-in-out infinite',
+                animationDelay: `${i * 0.12}s`,
+              }}
+            >
+              <svg
+                className={clsx(
+                  "text-primary-500/50 dark:text-primary-400/40",
+                  i % 3 === 0 ? "h-6 w-6" : i % 3 === 1 ? "h-5 w-5" : "h-4 w-4"
+                )}
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+              </svg>
+            </div>
+          ))}
+        </div>
+        
+        {/* Glow effect */}
+        <div 
+          className="absolute right-0 top-0 h-36 w-36 rounded-full bg-primary-400/20 blur-2xl dark:bg-primary-500/12"
+          style={{ animation: 'glow-pulse 4s ease-in-out infinite' }}
+        />
       </div>
       
-      {/* Accent glow */}
-      <div 
-        className="absolute right-0 top-0 h-24 w-24 rounded-full bg-primary-400/20 blur-2xl dark:bg-primary-500/15"
-        style={{ animation: 'glow-pulse 4s ease-in-out infinite' }}
-      />
-      
-      <div className="relative">
-        <dt className="font-mono text-sm font-medium text-primary-600 dark:text-primary-400">Members</dt>
-        <dd className="mt-1 font-display text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {event.members}
-        </dd>
-        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">and growing</p>
+      {/* Text with backdrop for readability */}
+      <div className="relative z-10">
+        <div className="inline-block rounded-lg px-2 py-1 -mx-2 -mb-1">
+          <dt className="font-mono text-sm font-medium text-primary-600 dark:text-primary-400">Members</dt>
+          <dd className="mt-1 font-display text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {event.members}
+          </dd>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">and growing</p>
+        </div>
       </div>
     </div>
   )
@@ -102,30 +133,47 @@ function EventCard({ delay = 0 }) {
       className="bento-card group relative flex flex-col justify-end min-h-[180px] overflow-hidden opacity-0 animate-fade-in-up"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
-      {/* Animated calendar icon */}
-      <div className="absolute right-4 top-4">
+      {/* Animated background blocks */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div 
+          className="absolute -right-6 -top-6 h-36 w-36 rounded-2xl bg-gradient-to-br from-primary-200/25 to-primary-300/12 dark:from-primary-800/15 dark:to-primary-700/8 rotate-6"
+          style={{ animation: 'float 7s ease-in-out infinite' }}
+        />
+        <div 
+          className="absolute right-20 top-0 h-20 w-20 rounded-xl bg-gradient-to-br from-primary-300/20 to-primary-400/10 dark:from-primary-700/12 dark:to-primary-600/6 -rotate-6"
+          style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}
+        />
+        <div 
+          className="absolute right-8 top-16 h-12 w-12 rounded-lg bg-gradient-to-br from-primary-400/18 to-primary-500/8 dark:from-primary-600/10 dark:to-primary-500/5 rotate-12"
+          style={{ animation: 'float 4s ease-in-out infinite', animationDelay: '2s' }}
+        />
+        
+        {/* Glow effect */}
+        <div 
+          className="absolute right-4 top-4 h-28 w-28 rounded-full bg-primary-400/15 blur-2xl dark:bg-primary-500/10"
+          style={{ animation: 'glow-pulse 3s ease-in-out infinite' }}
+        />
+      </div>
+      
+      {/* Large animated calendar icon */}
+      <div className="absolute right-3 top-2">
         <div 
           className="relative transition-transform group-hover:scale-105"
           style={{ animation: 'bounce-in 2s ease-in-out infinite' }}
         >
-          {/* Calendar body */}
-          <div className="h-16 w-14 rounded-lg bg-gradient-to-br from-accent-100 to-accent-200 shadow-lg dark:from-accent-900/50 dark:to-accent-800/50">
+          {/* Calendar body - larger */}
+          <div className="h-24 w-20 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 shadow-xl dark:from-primary-900/70 dark:to-primary-800/60">
             {/* Calendar header */}
-            <div className="h-4 rounded-t-lg bg-gradient-to-r from-accent-500 to-accent-400" />
+            <div className="h-6 rounded-t-xl bg-gradient-to-r from-primary-500 to-primary-400" />
             {/* Calendar rings */}
-            <div className="absolute -top-1 left-2 h-3 w-1.5 rounded-full bg-gray-400 dark:bg-gray-500" />
-            <div className="absolute -top-1 right-2 h-3 w-1.5 rounded-full bg-gray-400 dark:bg-gray-500" />
+            <div className="absolute -top-1.5 left-3 h-4 w-2 rounded-full bg-primary-400 dark:bg-primary-500" />
+            <div className="absolute -top-1.5 right-3 h-4 w-2 rounded-full bg-primary-400 dark:bg-primary-500" />
             {/* Date display */}
-            <div className="flex h-12 flex-col items-center justify-center">
-              <span className="font-display text-xl font-bold text-gray-900 dark:text-white">{day}</span>
-              <span className="text-[10px] font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">{month}</span>
+            <div className="flex h-[72px] flex-col items-center justify-center">
+              <span className="font-display text-3xl font-bold text-primary-700 dark:text-primary-200">{day}</span>
+              <span className="text-xs font-medium uppercase tracking-wide text-primary-500 dark:text-primary-400">{month}</span>
             </div>
           </div>
-          {/* Glow effect */}
-          <div 
-            className="absolute inset-0 -z-10 rounded-lg bg-accent-400/50 blur-xl transition-opacity group-hover:opacity-80"
-            style={{ animation: 'glow-pulse 3s ease-in-out infinite' }}
-          />
         </div>
       </div>
       
@@ -157,8 +205,26 @@ function VenueCard({ delay = 0 }) {
     >
       {/* Animated map visualization - positioned in upper area */}
       <div className="relative h-40 w-full">
+        {/* Block fills for map-like appearance */}
+        <div 
+          className="absolute left-2 top-2 h-16 w-16 rounded-xl bg-gradient-to-br from-primary-200/20 to-primary-300/10 dark:from-primary-800/12 dark:to-primary-700/6"
+          style={{ animation: 'float 6s ease-in-out infinite' }}
+        />
+        <div 
+          className="absolute right-3 top-4 h-12 w-20 rounded-lg bg-gradient-to-br from-primary-300/18 to-primary-400/8 dark:from-primary-700/10 dark:to-primary-600/5"
+          style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '1s' }}
+        />
+        <div 
+          className="absolute left-8 bottom-8 h-10 w-14 rounded-lg bg-gradient-to-br from-primary-200/15 to-primary-300/6 dark:from-primary-800/10 dark:to-primary-700/4"
+          style={{ animation: 'float 4s ease-in-out infinite', animationDelay: '2s' }}
+        />
+        <div 
+          className="absolute right-8 bottom-4 h-8 w-8 rounded-md bg-gradient-to-br from-primary-400/12 to-primary-500/5 dark:from-primary-600/8 dark:to-primary-500/4"
+          style={{ animation: 'float 3.5s ease-in-out infinite', animationDelay: '0.5s' }}
+        />
+        
         {/* Grid lines to simulate map */}
-        <div className="absolute inset-0 opacity-15 dark:opacity-10">
+        <div className="absolute inset-0 opacity-20 dark:opacity-15">
           <div className="absolute left-1/4 top-0 h-full w-px bg-primary-400" />
           <div className="absolute left-1/2 top-0 h-full w-px bg-primary-400" />
           <div className="absolute left-3/4 top-0 h-full w-px bg-primary-400" />
@@ -171,7 +237,7 @@ function VenueCard({ delay = 0 }) {
         {[0, 1, 2].map((i) => (
           <div
             key={i}
-            className="absolute left-1/2 top-1/2 rounded-full border-2 border-primary-500/40 dark:border-primary-400/30"
+            className="absolute left-1/2 top-1/2 rounded-full border-2 border-primary-500/50 dark:border-primary-400/40"
             style={{
               width: 60 + i * 35,
               height: 60 + i * 35,
@@ -183,12 +249,18 @@ function VenueCard({ delay = 0 }) {
           />
         ))}
         
+        {/* Glow behind pin */}
+        <div 
+          className="absolute left-1/2 top-1/2 -ml-8 -mt-8 h-16 w-16 rounded-full bg-primary-400/50 blur-xl dark:bg-primary-500/35"
+          style={{ animation: 'glow-pulse 3s ease-in-out infinite' }}
+        />
+        
         {/* Map pin - centered */}
         <div 
-          className="absolute left-1/2 top-1/2 z-10 -ml-5 -mt-5"
+          className="absolute left-1/2 top-1/2 z-10 -ml-6 -mt-6"
           style={{ animation: 'bounce-in 1.5s ease-in-out infinite' }}
         >
-          <svg className="h-10 w-10 text-primary-600 drop-shadow-lg dark:text-primary-400" viewBox="0 0 24 24" fill="currentColor">
+          <svg className="h-12 w-12 text-primary-600 drop-shadow-lg dark:text-primary-400" viewBox="0 0 24 24" fill="currentColor">
             <path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 3.69 2.923l.036.025.01.006.004.003.001.001.001.001ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
           </svg>
         </div>
@@ -220,19 +292,52 @@ function OrganiserCard({ delay = 0 }) {
       className="bento-card relative flex flex-col justify-end col-span-2 sm:col-span-2 min-h-[180px] overflow-hidden opacity-0 animate-fade-in-up"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
-      {/* Laravel logo animation */}
-      <div className="absolute right-3 top-3">
+      {/* Animated background with large block fills */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large animated blocks */}
         <div 
-          className="relative"
+          className="absolute -right-8 -top-8 h-44 w-44 rounded-3xl bg-gradient-to-br from-primary-200/25 to-primary-300/12 dark:from-primary-800/18 dark:to-primary-700/8 rotate-12"
+          style={{ animation: 'float 8s ease-in-out infinite' }}
+        />
+        <div 
+          className="absolute right-24 -top-4 h-32 w-32 rounded-2xl bg-gradient-to-br from-primary-300/20 to-primary-400/10 dark:from-primary-700/15 dark:to-primary-600/6 -rotate-6"
+          style={{ animation: 'float 6s ease-in-out infinite', animationDelay: '1s' }}
+        />
+        <div 
+          className="absolute right-48 top-8 h-20 w-20 rounded-xl bg-gradient-to-br from-primary-400/18 to-primary-500/8 dark:from-primary-600/12 dark:to-primary-500/5 rotate-12"
+          style={{ animation: 'float 5s ease-in-out infinite', animationDelay: '2s' }}
+        />
+        <div 
+          className="absolute right-72 top-2 h-14 w-14 rounded-lg bg-gradient-to-br from-primary-500/15 to-primary-600/6 dark:from-primary-500/10 dark:to-primary-400/4 -rotate-12"
+          style={{ animation: 'float 4s ease-in-out infinite', animationDelay: '0.5s' }}
+        />
+        
+        {/* Additional smaller floating elements */}
+        <div 
+          className="absolute right-16 top-20 h-8 w-8 rounded-md bg-primary-400/12 dark:bg-primary-500/8"
+          style={{ animation: 'bounce-in 3s ease-in-out infinite', animationDelay: '1.5s' }}
+        />
+        <div 
+          className="absolute right-40 top-24 h-6 w-6 rounded bg-primary-500/10 dark:bg-primary-400/6"
+          style={{ animation: 'bounce-in 2.5s ease-in-out infinite', animationDelay: '2.5s' }}
+        />
+
+        {/* Glow effects */}
+        <div 
+          className="absolute right-8 top-4 h-40 w-40 rounded-full bg-primary-400/15 blur-3xl dark:bg-primary-500/10"
+          style={{ animation: 'glow-pulse 4s ease-in-out infinite' }}
+        />
+        <div 
+          className="absolute right-32 top-8 h-24 w-24 rounded-full bg-primary-500/12 blur-2xl dark:bg-primary-400/8"
+          style={{ animation: 'glow-pulse 3s ease-in-out infinite', animationDelay: '1s' }}
+        />
+
+        {/* Laravel logo - larger */}
+        <div 
+          className="absolute right-4 top-3"
           style={{ animation: 'float 4s ease-in-out infinite' }}
         >
-          {/* Glow behind logo */}
-          <div 
-            className="absolute inset-0 -z-10 scale-150 rounded-full bg-red-500/20 blur-2xl dark:bg-red-400/15"
-            style={{ animation: 'glow-pulse 3s ease-in-out infinite' }}
-          />
-          {/* Laravel logo */}
-          <svg className="h-12 w-12 text-[#FF2D20]" viewBox="0 0 50 52" fill="currentColor">
+          <svg className="h-16 w-16 text-primary-700 dark:text-primary-300 drop-shadow-lg" viewBox="0 0 50 52" fill="currentColor">
             <path d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-21.483L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764 4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z" />
           </svg>
         </div>
