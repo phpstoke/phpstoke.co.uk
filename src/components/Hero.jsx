@@ -152,7 +152,7 @@ function VenueCard({ delay = 0 }) {
       href={event.venueUrl}
       target="_blank"
       rel="noreferrer"
-      className="bento-card group relative flex flex-col justify-between row-span-2 overflow-hidden opacity-0 animate-fade-in-up"
+      className="bento-card group relative flex flex-col justify-between row-span-2 overflow-hidden opacity-0 animate-fade-in-up col-span-2 sm:col-span-1"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
       {/* Animated map visualization - positioned in upper area */}
