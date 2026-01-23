@@ -2,8 +2,8 @@ const event = {
     // Core event info
     title: 'PHP Stoke',
     tagline: "The Midlands' friendliest PHP community",
-    subtitle: 'The Stoke-on-Trent PHP Meet-Up',
-    description: 'Tech talks, career advice, and the occasional free headshot. All welcome—from first-timers to seasoned pros.',
+    subtitle: 'The Stoke-on-Trent PHP Meetup',
+    description: 'A friendly meetup with tech talks, soft talks, and the occasional free headshot. Everyone welcome — from first-timers to seasoned pros.',
     
     // Event details
     event: 'Thursday, 26th February 2026 @ 6:15pm',

@@ -2,7 +2,7 @@
 Organiser: James Brooks
 Contact: james@alt-three.com
 Twitter: @jbrooksuk
-Link: https://pinkary.com/@jbrooksuk
+Link: https://james.brooks.page
 Company: Laravel
 
 /* EVENT */
@@ -10,4 +10,4 @@ Event: PHP Stoke
 What3Words: ///melon.prices.soil
 Twitter: @phpstoke
 Location: The Smithfield Works, Broad St, Hanley, Stoke-on-Trent, ST1 4UE
-About: PHP Stoke is a free meet-up in Stoke-on-Trent. Meet local developers, learn about PHP and enjoy some food and drink 🍕🍻🥤.
+About: A friendly meetup with tech talks, soft talks, and the occasional free headshot. Everyone welcome — from first-timers to seasoned pros.
