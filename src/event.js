@@ -3,7 +3,7 @@ const event = {
     title: 'PHP Stoke',
     tagline: "The Midlands' friendliest PHP community",
     subtitle: 'The Stoke-on-Trent PHP Meetup',
-    description: 'A friendly meetup with tech talks, soft talks, and the occasional free headshot. Everyone welcome — from first-timers to seasoned pros.',
+    description: 'Join us for tech talks, career advice, and free beer & pizza. A relaxed, ego-free community where everyone is welcome—from first-timers to seasoned pros.',
     
     // Event details
     event: 'Thursday, 26th February 2026 @ 6:15pm',
@@ -22,7 +22,7 @@ const event = {
     
     // Meta
     metaTitle: "PHP Stoke — The Midlands' friendliest PHP community",
-    metaDescription: "Free PHP meetup in Stoke-on-Trent. Tech talks, career advice, networking, and pizza. 230+ members, all skill levels welcome.",
+    metaDescription: "Stoke-on-Trent's friendly PHP meetup. Join 230+ devs for tech talks, career growth, networking, and free pizza. Open to all skill levels.",
     
     // Organiser
     organiser: {
