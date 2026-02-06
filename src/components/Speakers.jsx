@@ -46,8 +46,12 @@ const days = [
         lightning: false,
         available: false,
       }, {
+        name: 'Michael Connelly',
+        role: 'Software Engineer at Fabric',
+        talk: 'From Nouns to Verbs',
+        image: michaelConnelly,
         lightning: false,
-        available: true,
+        available: false,
       }, {
         lightning: true,
         available: true,
