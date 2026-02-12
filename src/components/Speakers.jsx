@@ -29,6 +29,7 @@ import stuartOtter from '@/images/avatars/stuart-otter.jpeg'
 import jamiePeters from '@/images/avatars/jamie-peters.jpg'
 import danNewns from '@/images/avatars/dan-newns.jpg'
 import ollieReardon from '@/images/avatars/ollie-reardon.jpeg'
+import adamDavis from '@/images/avatars/adam-davis.jpeg'
 
 import { AcademicCapIcon, BoltIcon, UserIcon } from '@heroicons/react/24/solid'
 
@@ -47,14 +48,18 @@ const days = [
         available: false,
       }, {
         name: 'Michael Connelly',
-        role: 'Software Engineer at Fabric',
+        role: 'Software Engineer @ Fabric',
         talk: 'From Nouns to Verbs',
         image: michaelConnelly,
         lightning: false,
         available: false,
       }, {
+        name: 'Adam Davis',
+        role: 'Senior Software Engineering Manager @ Bet365',
+        talk: 'Designing Connected Learning Experiences with AI',
+        image: adamDavis,
         lightning: true,
-        available: true,
+        available: false,
       },
     ],
   },
@@ -65,14 +70,14 @@ const days = [
     speakers: [
       {
         name: 'David Hill',
-        role: 'Head of Design at Laravel',
+        role: 'Head of Design @ Laravel',
         talk: 'Designing Laravel',
         twitterUrl: 'iamdavidhill',
         lightning: false,
         available: false,
       }, {
         name: 'Dan Newns',
-        role: 'Co-Founder at Jump24',
+        role: 'Co-Founder @ Jump24',
         talk: 'Coding standards as easy as E.C.S',
         image: danNewns,
         twitterUrl: 'danielnewns',
@@ -96,7 +101,7 @@ const days = [
     speakers: [
       {
         name: 'Jamie Peters',
-        role: 'Full Stack Developer at Jump24',
+        role: 'Full Stack Developer @ Jump24',
         talk: 'Benefits of and tips for writing cleaner code',
         image: jamiePeters,
         twitterUrl: 'jpeters8889',
@@ -104,7 +109,7 @@ const days = [
         available: false,
       }, {
         name: 'Dan Johnson',
-        role: 'Head of Engineering at Trybe',
+        role: 'Head of Engineering @ Trybe',
         talk: 'Encoding Explained',
         image: null,
         twitterUrl: 'danjohnsonxyz',
@@ -112,7 +117,7 @@ const days = [
         available: false,
       }, {
         name: 'Stuart Otter',
-        role: 'Head of Technical at Aware Digital',
+        role: 'Head of Technical @ Aware Digital',
         talk: 'Imposter Syndrome: How to keep your head on',
         image: stuartOtter,
         linkedInUrl: 'https://www.linkedin.com/in/stuartotter/',
@@ -163,7 +168,7 @@ const days = [
     speakers: [
       {
         name: 'Matt Davis',
-        role: 'CTO at Mumsnet',
+        role: 'CTO @ Mumsnet',
         talk: 'Disagree Better',
         image: mattDavis,
         twitterUrl: 'mdavis1982',
@@ -173,7 +178,7 @@ const days = [
       }, {
         name: 'Ryan Chandler',
         role: 'Senior Software Developer',
-        talk: 'Running PHP at lightspeed',
+        talk: 'Running PHP @ lightspeed',
         image: ryanChandler,
         twitterUrl: 'ryangjchandler',
         webUrl: 'https://ryangjchandler.co.uk/',
@@ -197,7 +202,7 @@ const days = [
     speakers: [
       {
         name: 'Michael Connelly',
-        role: 'Software Engineer at Fabric',
+        role: 'Software Engineer @ Fabric',
         talk: 'Up Up Down Down Left Right Left Right Composer Require Livewire',
         image: michaelConnelly,
         twitterUrl: 'mike_c_dev',
@@ -206,7 +211,7 @@ const days = [
         available: false,
       }, {
         name: 'Harry Messenger',
-        role: 'Senior Full Stack Developer at Wealth At Work',
+        role: 'Senior Full Stack Developer @ Wealth @ Work',
         talk: 'The Real Time Web using Laravel',
         image: harryMessenger,
         twitterUrl: 'harrysmessenger',
