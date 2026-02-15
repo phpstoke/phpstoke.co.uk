@@ -12,7 +12,7 @@ const event = {
     venueUrl: 'https://smithfield-works.com/?ref=phpstoke',
     
     // Social proof
-    members: '230+',
+    members: '250+',
     totalEvents: 9,
     totalTalks: 20,
     
@@ -22,7 +22,7 @@ const event = {
     
     // Meta
     metaTitle: "PHP Stoke — The Midlands' friendliest PHP community",
-    metaDescription: "Stoke-on-Trent's friendly PHP meetup. Join 230+ devs for tech talks, career growth, networking, and free pizza. Open to all skill levels.",
+    metaDescription: "Stoke-on-Trent's friendly PHP meetup. Join 250+ devs for tech talks, career growth, networking, and free pizza. Open to all skill levels.",
     
     // Organiser
     organiser: {
