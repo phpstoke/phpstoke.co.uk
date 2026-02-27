@@ -10,6 +10,12 @@ const event = {
     meetupUrl: 'https://www.meetup.com/php-stoke/events/312899312/',
     location: 'The Smithfield Works, Stoke-on-Trent',
     venueUrl: 'https://smithfield-works.com/?ref=phpstoke',
+    venue: {
+        name: 'The Smithfield Works',
+        locality: 'Stoke-on-Trent',
+        region: 'Staffordshire',
+        country: 'GB',
+    },
     
     // Social proof
     members: '250+',
