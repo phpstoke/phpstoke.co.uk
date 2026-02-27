@@ -8,6 +8,8 @@ import '@/styles/tailwind.css'
 
 import event from '@/event'
 
+const OG_IMAGE_URL = 'https://phpstoke.co.uk/og.png'
+
 function usePrevious(value) {
   let ref = useRef()
 
@@ -48,7 +50,7 @@ export default function App({ Component, pageProps, router }) {
         <meta property="og:title" content={event.metaTitle} />
         <meta property="og:url" key="ogUrl" />
         <meta property="og:locale" content="en_GB" />
-        <meta property="og:image" content={pageProps.preview} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:description" content={event.metaDescription} />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +58,7 @@ export default function App({ Component, pageProps, router }) {
         <meta name="twitter:creator" content="@phpstoke" />
         <meta name="twitter:url" key="twitterUrl" />
         <meta name="twitter:title" content={event.metaTitle} />
-        <meta name="twitter:image" content={pageProps.preview} />
+        <meta name="twitter:image" content={OG_IMAGE_URL} />
         <meta name="twitter:description" content={event.metaDescription} />
       </Head>
 
