@@ -36,6 +36,7 @@ export async function getServerSideProps(context) {
 export default function Home({ fullUrl }) {
   const pageUrl = fullUrl ?? 'https://phpstoke.co.uk'
   const eventStartDate = `${event.date}T18:15:00+00:00`
+  const eventEndDate = `${event.date}T21:15:00+00:00`
 
   const locationAddress = {
     '@type': 'PostalAddress',
@@ -71,10 +72,17 @@ export default function Home({ fullUrl }) {
     '@id': `${pageUrl}#next-event`,
     name: `${event.title} Meetup`,
     description: event.description,
+    image: `${pageUrl}/android-chrome-512x512.png`,
     startDate: eventStartDate,
+    endDate: eventEndDate,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
     location: locationPlace,
+    performer: {
+      '@type': 'Organization',
+      name: event.title,
+      url: pageUrl,
+    },
     organizer: {
       '@id': `${pageUrl}#organization`,
     },
@@ -84,6 +92,7 @@ export default function Home({ fullUrl }) {
       price: '0',
       priceCurrency: 'GBP',
       availability: 'https://schema.org/InStock',
+      validFrom: eventStartDate,
     },
   }
 
