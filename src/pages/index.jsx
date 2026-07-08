@@ -9,26 +9,12 @@ import { Speakers } from '@/components/Speakers'
 import { SpeakingCTA } from '@/components/SpeakingCTA'
 import { PastSponsors, Sponsors } from '@/components/Sponsors'
 import { WhatToExpect } from '@/components/WhatToExpect'
-import { previewlinks } from '@/lib/previewlinks'
 import event from '@/event'
 
-export async function getServerSideProps(context) {
-  const preview = await previewlinks.signedImageUrl({
-    siteId: 764,
-    templateId: 1013,
-    fields: {
-      'previewlinks:overline': event.tagline,
-      'previewlinks:title': event.title,
-      'previewlinks:subtitle': event.description,
-      'previewlinks:repository': event.event,
-      'previewlinks:image': 'https://phpstoke.co.uk/android-chrome-512x512.png',
-    },
-  })
-
+export async function getStaticProps() {
   return {
     props: {
-      preview,
-      fullUrl: process.env.FULL_URL,
+      fullUrl: process.env.FULL_URL ?? null,
     },
   }
 }
